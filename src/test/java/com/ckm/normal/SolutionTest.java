@@ -6,7 +6,13 @@ import com.ckm.common.ListNode;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution2();
+        testSolution3();
+    }
+
+    private static void testSolution3() {
+        Solution3 solution = new Solution3();
+        int s = solution.lengthOfLongestSubstring2("abcdddcbae");
+        System.out.println();
     }
 
     private static void testSolution1() {

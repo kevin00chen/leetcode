@@ -38,7 +38,7 @@ Explanation: 342 + 465 = 807.
 
 [Solution](./src/main/java/com/ckm/normal/Solution2.java)
 
-### 2 最长非重复子字符串 
+### 3 最长非重复子字符串 
 问题描述：
 
 　　给定一个字符串，返回该字符串中非重复字符子串的最大长度。
@@ -65,9 +65,13 @@ Explanation: 最长非重复子串为 "wke", 长度 3.
 
 解法：
 
-　　
+　　1、遍历一次字符串，维护一个<字符, index>的map结构，当遇到重复字符时，计数归零，新计数起点值为两个相同字符之间字符的个数。
+需要注意`abba`这种结构，第一个`a`出现在`b`之前，此时新的计数起点只能从第二个`b`开始。
 
-[Solution](./src/main/java/com/ckm/normal/Solution1.java)
+　　2、维护一个滑动窗口`[i, j)`，该窗口中的元素全部不相同。维护一个`Set`记录不同的字符，每次使`j`向后移动一位，当新字符第一次出现，则`j`继续向后移动,
+否则从`i`开始移除`Set`中的元素，直到不再出现重复元素为止。然后继续移动`j`，直到`i`和`j`都遍历完全部元素。
+
+[Solution](./src/main/java/com/ckm/normal/Solution3.java)
 
 ### 2 
 问题描述：
