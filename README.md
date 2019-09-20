@@ -73,6 +73,59 @@ Explanation: 最长非重复子串为 "wke", 长度 3.
 
 [Solution](./src/main/java/com/ckm/normal/Solution3.java)
 
+### 4 两个有序数组中位数计算
+问题描述：
+
+　　两个排好序的数组（两个数组不同时为空），分别包含m个和n个元素，计算中位数。时间复杂度`O(log (m+n))`
+
+示例：
+
+```
+Example 1:
+
+nums1 = [1, 3]
+nums2 = [2]
+
+The median is 2.0
+Example 2:
+
+nums1 = [1, 2]
+nums2 = [3, 4]
+
+The median is (2 + 3)/2 = 2.5
+```
+
+解法：
+
+　　
+
+[Solution](./src/main/java/com/ckm/normal/Solution4.java)
+
+### 5 寻找字符串的最大回文子串
+问题描述：
+
+　　如题
+
+示例：
+
+```
+Example 1:
+
+Input: "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
+Example 2:
+
+Input: "cbbd"
+Output: "bb"
+```
+
+解法：
+
+　　
+
+[Solution](./src/main/java/com/ckm/normal/Solution1.java)
+
 ### 2 
 问题描述：
 

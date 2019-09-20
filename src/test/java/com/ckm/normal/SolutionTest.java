@@ -6,7 +6,13 @@ import com.ckm.common.ListNode;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution3();
+        testSolution4();
+    }
+
+    private static void testSolution4() {
+        Solution4 solution = new Solution4();
+        double x = solution.findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4});
+        System.out.println(x);
     }
 
     private static void testSolution3() {
