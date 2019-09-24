@@ -122,9 +122,14 @@ Output: "bb"
 
 解法：
 
-　　
+　　1、反转原字符串后，求两个字符串的最长公共子序列
 
-[Solution](./src/main/java/com/ckm/normal/Solution1.java)
+　　2、回文字符串关于某个字符左右对称。所以，判断字符串是否为回文时可以从某个字符向两边扩展进行判断。对于`aba`和`abba`这种字符数分为奇偶的情况，有一种快捷方法，即对字符串进行扩展，
+如`#a#b#a#`或者`#a#b#b#a#`，在整个字符串开头和结尾，以及每个字符中间都加上`#`，就可以对任意长度字符串进行同样的处理逻辑。
+
+[Solution](./src/main/java/com/ckm/normal/Solution5.java)
+
+
 
 ### 2 
 问题描述：

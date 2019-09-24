@@ -6,7 +6,13 @@ import com.ckm.common.ListNode;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution4();
+        testSolution5();
+    }
+
+    private static void testSolution5() {
+        Solution5 solution = new Solution5();
+        String x = solution.longestPalindrome("cbbd");
+        System.out.println(x);
     }
 
     private static void testSolution4() {
