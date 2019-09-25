@@ -11,7 +11,7 @@ public class SolutionTest {
 
     private static void testSolution5() {
         Solution5 solution = new Solution5();
-        String x = solution.longestPalindrome("cbbd");
+        String x = solution.longestPalindrome("aa");
         System.out.println(x);
     }
 
