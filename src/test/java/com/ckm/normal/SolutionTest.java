@@ -6,7 +6,13 @@ import com.ckm.common.ListNode;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution6();
+        testSolution7();
+    }
+
+    private static void testSolution7() {
+        Solution7 solution = new Solution7();
+        int x = solution.reverse(1534236469);
+        System.out.println(x);
     }
 
     private static void testSolution6() {

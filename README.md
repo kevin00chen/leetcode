@@ -144,7 +144,7 @@ Output: "bb"
 
 ![动态规划图解](./src/main/resources/images/s5-2.png)
 
-### 6 [](./src/main/java/com/ckm/normal/Solution6.java)
+### 6 [ZigZag字符转换](./src/main/java/com/ckm/normal/Solution6.java)
 问题描述：
 
 　　字符串"PAYPALISHIRING"是按照`|/|`形排列的，即首先从上往下依次显示字符，然后斜向上到顶后继续第二列从上往下。如下所示，
@@ -182,19 +182,33 @@ Output: "bb"
 
 　　遍历字符串，按从上往下的顺序设置数组后，再按从左至右的顺序依次读取。没有字符的地方用空字符串表示。
 
-### 2 [](./src/main/java/com/ckm/normal/Solution1.java)
+### 7 [整数反转](./src/main/java/com/ckm/normal/Solution7.java)
 问题描述：
 
-　　
+　　给定一个整数，将其数字进行反转。
 
 示例：
 
+```
+  Example 1:
+  
+  Input: 123
+  Output: 321
+  Example 2:
+  
+  Input: -123
+  Output: -321
+  Example 3:
+  
+  Input: 120
+  Output: 21
+```
 
 解法：
 
-　　
+　　去掉
 
-### 2 [](./src/main/java/com/ckm/normal/Solution1.java)
+### 8 [](./src/main/java/com/ckm/normal/Solution8.java)
 问题描述：
 
 　　
