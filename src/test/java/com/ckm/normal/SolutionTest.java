@@ -6,7 +6,13 @@ import com.ckm.common.ListNode;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution5();
+        testSolution6();
+    }
+
+    private static void testSolution6() {
+        Solution6 solution = new Solution6();
+        String x = solution.convert("ABCD", 2);
+        System.out.println(x);
     }
 
     private static void testSolution5() {

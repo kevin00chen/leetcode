@@ -17,7 +17,6 @@ nums[0] + nums[1] = 2 + 7 = 9,
 
 　　除了两层遍历的暴力解法之外，还可以用HashMap来解决，遍历数组，target - 当前元素 之差如果不在该map中，则map中添加元素，否则直接返回下标。
 
-
 ### 2 [两数求和](./src/main/java/com/ckm/normal/Solution2.java)
 问题描述：
 
@@ -145,17 +144,43 @@ Output: "bb"
 
 ![动态规划图解](./src/main/resources/images/s5-2.png)
 
-### 2 [](./src/main/java/com/ckm/normal/Solution1.java)
+### 6 [](./src/main/java/com/ckm/normal/Solution6.java)
 问题描述：
 
-　　
+　　字符串"PAYPALISHIRING"是按照`|/|`形排列的，即首先从上往下依次显示字符，然后斜向上到顶后继续第二列从上往下。如下所示，
+  
+  P   A   H   N
+  A P L S I I G
+  Y   I   R
+
+　　排列好后按行读取字符并形成新的字符串，"PAHNAPLSIIGYIR"。
+  
+　　代码接收一个字符串参数，以及整数的行数，实现字符串的zigzag排列。
 
 示例：
 
+```
+  Example 1:
+  
+  Input: s = "PAYPALISHIRING", numRows = 3
+  Output: "PAHNAPLSIIGYIR"
+  Example 2:
+  
+  Input: s = "PAYPALISHIRING", numRows = 4
+  Output: "PINALSIGYAHRPI"
+  Explanation:
+  
+  P     I    N
+  A   L S  I G
+  Y A   H R
+  P     I
+```
 
 解法：
 
-　　
+　　对于`n`行的zigzag字符，可以用`n + (n - 2)`为一组，每组占`1 + (n - 2)`列，字符串总字符数除以每组的元素个数即可得到总共的组数，然后乘以列数，就可以构造出一个二维数组。
+
+　　遍历字符串，按从上往下的顺序设置数组后，再按从左至右的顺序依次读取。没有字符的地方用空字符串表示。
 
 ### 2 [](./src/main/java/com/ckm/normal/Solution1.java)
 问题描述：
