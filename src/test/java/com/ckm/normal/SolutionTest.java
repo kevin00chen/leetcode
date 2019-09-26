@@ -2,12 +2,57 @@ package com.ckm.normal;
 
 
 import com.ckm.common.ListNode;
+import com.ckm.struct.Solution146;
+import com.ckm.struct.Solution460;
 
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution7();
+        testSolution460();
     }
+
+    private static void testSolution460() {
+        Solution460 cache = new Solution460(2);
+        cache.put(1, 1);
+        cache.put(2, 2);
+        Object x = cache.get(1);       // returns 1
+        cache.put(3, 3);    // evicts key 2
+        x = cache.get(2);       // returns -1 (not found)
+        x = cache.get(3);       // returns 3.
+        cache.put(4, 4);    // evicts key 1.
+        x = cache.get(1);       // returns -1 (not found)
+        x = cache.get(3);       // returns 3
+        x = cache.get(4);       // returns 4
+        System.out.println();
+    }
+
+    private static void testSolution146() {
+        Solution146 cache = new Solution146( 2 /* capacity */ );
+
+        Object y = cache.get(2);
+        cache.put(2, 6);
+        y = cache.get(2);
+        y = cache.get(1);
+        cache.put(1, 5);
+        cache.put(1, 2);
+        y = cache.get(1);
+        y = cache.get(2);
+
+
+
+        cache.put(1, 1);
+        cache.put(2, 2);
+        Object x = cache.get(1);       // returns 1
+        cache.put(3, 3);    // evicts key 2
+        x = cache.get(2);       // returns -1 (not found)
+        cache.put(4, 4);    // evicts key 1
+        x = cache.get(1);       // returns -1 (not found)
+        x = cache.get(3);       // returns 3
+        x = cache.get(4);       // returns 4
+
+
+    }
+
 
     private static void testSolution7() {
         Solution7 solution = new Solution7();
