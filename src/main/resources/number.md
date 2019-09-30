@@ -1,5 +1,7 @@
 　　主要记录数字相关的题目。
 
+[TOC]
+
 ### 7 [整数反转](../java/com/ckm/number/Solution7.java)
 问题描述：
 
