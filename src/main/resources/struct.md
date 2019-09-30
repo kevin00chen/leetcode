@@ -29,7 +29,7 @@
 　　只需要维护一个`Queue`，`get`元素时，如果元素在该队列中，先将其移除，然后重新添加到尾部。
 `put`元素时，如果元素在其中，调用一次`get`方法将其调整到尾部，如果元素不在其中并且`capacity`达到最大，则移除头部一个元素，然后将当前元素添加到尾部。
 
-### 460 [LFU Cache](../java/com/ckm/LFUCache.java)
+### 460 [LFU Cache](../java/com/ckm/struct/LFUCache.java)
 问题描述：
 
 　　实现一个LFU Cache数据结构，需要在`O(1)`的时间复杂度内支持`put`和`get`方法，
@@ -66,3 +66,15 @@
 维护一个`Map<Int, Set<Int>>`用来记录相同操作次数的元素，但是，由于相同次数的元素需要按照操作先后有序，所以使用`LinkedHashSet`来记录。
 
 　　需要注意的是在`put`时，当该元素已存在，可以理解为间接的调用一次`put`方法，调整其次数顺序。移除元素时需要优先移除`LinkedHashSet`头部元素。
+
+### 8 [](../java/com/ckm/struct/LRUCache.java)
+问题描述：
+
+　　
+
+示例：
+
+
+解法：
+
+　　

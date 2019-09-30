@@ -1,4 +1,4 @@
-package com.ckm.normal;
+package com.ckm.string;
 
 public class Solution5 {
 

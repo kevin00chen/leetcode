@@ -1,4 +1,4 @@
-package com.ckm.normal;
+package com.ckm.array;
 
 public class Solution4 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {

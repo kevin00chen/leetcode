@@ -1,4 +1,4 @@
-package com.ckm.normal;
+package com.ckm.number;
 
 public class Solution7 {
     public int reverse(int x) {

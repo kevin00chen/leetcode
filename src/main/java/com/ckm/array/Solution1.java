@@ -1,4 +1,4 @@
-package com.ckm.normal;
+package com.ckm.array;
 import	java.util.HashMap;
 
 import java.util.Map;

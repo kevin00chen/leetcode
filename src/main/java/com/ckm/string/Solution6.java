@@ -1,4 +1,4 @@
-package com.ckm.normal;
+package com.ckm.string;
 
 public class Solution6 {
     public String convert(String s, int numRows) {
