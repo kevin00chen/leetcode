@@ -2,8 +2,8 @@ package com.ckm.normal;
 
 
 import com.ckm.common.ListNode;
-import com.ckm.struct.Solution146;
-import com.ckm.struct.Solution460;
+import com.ckm.struct.LRUCache;
+import com.ckm.struct.LFUCache;
 
 public class SolutionTest {
 
@@ -12,7 +12,41 @@ public class SolutionTest {
     }
 
     private static void testSolution460() {
-        Solution460 cache = new Solution460(2);
+        LFUCache cache = new LFUCache(2);
+        cache.put(1, 1);
+        cache.put(2, 2);
+        Object x4 = cache.get(1); // 1
+        cache.put(3, 3);
+        x4 = cache.get(2); // -1
+        x4 = cache.get(3); // 3
+        cache.put(4, 4);
+        x4 = cache.get(1); // -1 1
+        x4 = cache.get(3); //  3 -1
+        x4 = cache.get(4); //  4 4
+
+        cache.put(2, 1);
+        cache.put(1, 1);
+        cache.put(2, 3);
+        cache.put(4, 1);
+        Object x3 = cache.get(1); // -1
+        x3 = cache.get(2); // 3
+
+        cache.put(2, 1);
+        cache.put(1, 1);
+        cache.put(1, 3);
+        cache.put(4, 1);
+        Object x2 = cache.get(1);
+        x2 = cache.get(2);
+
+        Object x1 = cache.get(2);
+        cache.put(2, 6);
+        x1 = cache.get(1);
+        cache.put(1, 5);
+        cache.put(1, 2);
+        x1 = cache.get(1);
+        x1 = cache.get(2);
+        System.out.println();
+
         cache.put(1, 1);
         cache.put(2, 2);
         Object x = cache.get(1);       // returns 1
@@ -27,7 +61,7 @@ public class SolutionTest {
     }
 
     private static void testSolution146() {
-        Solution146 cache = new Solution146( 2 /* capacity */ );
+        LRUCache cache = new LRUCache( 2 /* capacity */ );
 
         Object y = cache.get(2);
         cache.put(2, 6);

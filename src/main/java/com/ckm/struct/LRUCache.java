@@ -5,12 +5,12 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class Solution146 {
+public class LRUCache {
     int capacity;
     Map<Integer, Integer> elements;
     Queue<Integer> queue;
 
-    public Solution146(int capacity) {
+    public LRUCache(int capacity) {
         this.capacity = capacity;
         this.elements = new HashMap<>();
         this.queue = new LinkedBlockingQueue<>();
@@ -31,8 +31,7 @@ public class Solution146 {
         }
         elements.put(key, value);
         if (elements.containsKey(key)) {
-            queue.remove(key);
-            queue.add(key);
+            get(key);
         } else {
             queue.add(key);
         }
