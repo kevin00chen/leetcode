@@ -124,6 +124,51 @@ Output: "bb"
 
 　　遍历字符串，按从上往下的顺序设置数组后，再按从左至右的顺序依次读取。没有字符的地方用空字符串表示。
 
+### 8 [字符串转数字](../java/com/ckm/string/Solution8.java)
+问题描述：
+
+　　输入一个字符串，从前往后遍历字符，直到第一个非空格为止。起始字符可以是数字，也可以是`+/-`符号。后续连续取数字字符，作为返回的结果。
+在数字之后可以继续写入字符。
+
+　　需要注意的是，如果第一个非空格不是数字或者`+/-`符号，则返回`0`。如果整数范围。超出部分返回`INT.MAX`或者`INT.MIN`。
+
+示例：
+
+```
+Example 1:
+
+Input: "42"
+Output: 42
+
+Example 2:
+
+Input: "   -42"
+Output: -42
+Explanation: 第一个非空格字符是'-', 表示负号。结果为-42。
+
+Example 3:
+
+Input: "4193 with words"
+Output: 4193
+Explanation: 最后一个数字为3，后面的字符略。
+
+Example 4:
+
+Input: "words and 987"
+Output: 0
+Explanation: 第一个非空格为'w', 不是数字也不是+/-符号，因此返回0。
+
+Example 5:
+
+Input: "-91283472332"
+Output: -2147483648
+Explanation: 数字"-91283472332"越界，返回`INT_MIN`
+```
+
+解法：
+
+　　略，看代码
+
 ### 8 [](../java/com/ckm/string/Solution3.java)
 问题描述：
 

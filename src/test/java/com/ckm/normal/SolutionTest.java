@@ -8,13 +8,20 @@ import com.ckm.number.Solution7;
 import com.ckm.string.Solution3;
 import com.ckm.string.Solution5;
 import com.ckm.string.Solution6;
+import com.ckm.string.Solution8;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
 
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution460();
+        testSolution8();
+    }
+
+    private static void testSolution8() {
+        Solution8 solution = new Solution8();
+        int x = solution.myAtoi(" ");
+        System.out.println();
     }
 
     private static void testSolution460() {

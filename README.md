@@ -23,7 +23,7 @@
 | 2019-09-17 | [2](src/main/resources/array.md), [3](src/main/resources/string.md), [4](src/main/resources/array.md) |
 | 2019-09-24 | [5](src/main/resources/string.md) |
 | 2019-09-25 | [6](src/main/resources/string.md), [7](src/main/resources/number.md), [146](src/main/resources/struct.md), [460](src/main/resources/struct.md) |
-| 2019-09-30 |  |
+| 2019-09-30 | [8](src/main/resources/string.md) |
 | 2019-10- |  |
 | 2019-10- |  |
 | 2019-10- |  |
