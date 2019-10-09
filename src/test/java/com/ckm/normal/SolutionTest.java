@@ -1,6 +1,7 @@
 package com.ckm.normal;
 
 import com.ckm.array.Solution1;
+import com.ckm.array.Solution11;
 import com.ckm.array.Solution2;
 import com.ckm.array.Solution4;
 import com.ckm.common.ListNode;
@@ -13,7 +14,15 @@ import com.ckm.struct.LFUCache;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution10();
+        testSolution11();
+    }
+
+    private static void testSolution11() {
+        Solution11 solution = new Solution11();
+        int[] h = new int[]{2,3,4,5,18,17,6};
+        int x = solution.maxArea(h);
+        int y = solution.maxArea1(h);
+        System.out.println();
     }
 
     private static void testSolution10() {
