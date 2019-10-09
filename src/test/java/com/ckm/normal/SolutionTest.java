@@ -5,17 +5,27 @@ import com.ckm.array.Solution2;
 import com.ckm.array.Solution4;
 import com.ckm.common.ListNode;
 import com.ckm.number.Solution7;
-import com.ckm.string.Solution3;
-import com.ckm.string.Solution5;
-import com.ckm.string.Solution6;
-import com.ckm.string.Solution8;
+import com.ckm.number.Solution9;
+import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
 
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution8();
+        testSolution10();
+    }
+
+    private static void testSolution10() {
+        Solution10 solution = new Solution10();
+        boolean r = solution.isMatch("a", "aa");
+        System.out.println();
+    }
+
+    private static void testSolution9() {
+        Solution9 solution = new Solution9();
+        boolean x = solution.isPalindrome(121);
+        System.out.println();
     }
 
     private static void testSolution8() {

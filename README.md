@@ -24,7 +24,7 @@
 | 2019-09-24 | [5](src/main/resources/string.md) |
 | 2019-09-25 | [6](src/main/resources/string.md), [7](src/main/resources/number.md), [146](src/main/resources/struct.md), [460](src/main/resources/struct.md) |
 | 2019-09-30 | [8](src/main/resources/string.md) |
-| 2019-10- |  |
-| 2019-10- |  |
+| 2019-10-02 | [9](src/main/resources/number.md) |
+| 2019-10-03 | [10](src/main/resources/string.md) |
 | 2019-10- |  |
 | 2019-10- |  |
