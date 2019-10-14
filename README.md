@@ -27,4 +27,9 @@
 | 2019-10-02 | [9](src/main/resources/number.md) |
 | 2019-10-03 | [10](src/main/resources/string.md) |
 | 2019-10-09 | [11](src/main/resources/array.md) |
-| 2019-10- |  |
+| 2019-10-10 | [287](src/main/resources/array.md), [12](src/main/resources/number.md) |
+| 2019-10-12 | [13](src/main/resources/string.md) |
+| 2019-10-14 | [14](src/main/resources/string.md), [15](src/main/resources/string.md) |
+| 2019-10-1 |  |
+| 2019-10-1 |  |
+| 2019-10-1 |  |

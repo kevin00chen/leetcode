@@ -1,10 +1,8 @@
 package com.ckm.normal;
 
-import com.ckm.array.Solution1;
-import com.ckm.array.Solution11;
-import com.ckm.array.Solution2;
-import com.ckm.array.Solution4;
+import com.ckm.array.*;
 import com.ckm.common.ListNode;
+import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
 import com.ckm.string.*;
@@ -14,7 +12,31 @@ import com.ckm.struct.LFUCache;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution11();
+        testSolution14();
+    }
+
+    private static void testSolution14() {
+        Solution14 solution14 = new Solution14();
+        String x = solution14.longestCommonPrefix(new String[]{"flower","flow","flight"});
+        System.out.println();
+    }
+
+    private static void testSolution13() {
+        Solution13 solution = new Solution13();
+        int x = solution.romanToInt("MCMXCIV");
+        System.out.println();
+    }
+
+    private static void testSolution12() {
+        Solution12 solution = new Solution12();
+        String x = solution.intToRoman(1994); // MCMXCIV
+        System.out.println();
+    }
+
+    private static void testSolution287() {
+        Solution287 struct = new Solution287();
+        int m = struct.findDuplicate(new int[]{3,1,3,4,2});
+        System.out.println();
     }
 
     private static void testSolution11() {

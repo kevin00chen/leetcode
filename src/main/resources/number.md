@@ -60,6 +60,59 @@ Explanation: 从右到左为01。所以为非回文数字。
 反转时需要注意以0结尾的数字提前处理。`while`循环中，由于只需要反转一半数字，所以没必要将原来的`x`全部循环完即`x >0`，只需要在`x > y`时继续就行。
 对于`12321`，处理后得到的`y = 123`，此时`x = 12`，这是由于原数字有奇数位，所以在`return`语句中，`x == y / 10`。
 
+### 12 [整数转罗马数字符号](../java/com/ckm/number/Solution12.java)
+问题描述：
+
+　　罗马数字符号由`I, V, X, L, C, D,  M`表示，其中
+
+| 符号 | 数值 |
+|---|---|
+| I | 1 |
+| V | 5 |
+| X | 10 |
+| L | 50 |
+| C | 100 |
+| D | 500 |
+| M | 1000 |
+
+　　`2`表示为`II`，`12`表示为`XII`，`27`表示为`XXVII`。但是`4`不是`IIII`而是`IV`，`9`不是`VIIII`而是`IX`。
+
+- I 可位于 V (5) 和 X (10) 之前，表示 4 和 9。 
+- X 可位于 L (50) 和 C (100) 之前，表示 40 和 90。 
+- C 可位于 D (500) 和 M (1000) 之前，表示 400 和 900。
+
+　　给定一个`1 ~ 3999`之间的整数，返回其罗马数字表示方式。
+
+示例：
+
+```
+Example 1:
+Input: 3
+Output: "III"
+
+Example 2:
+Input: 4
+Output: "IV"
+
+Example 3:
+Input: 9
+Output: "IX"
+
+Example 4:
+Input: 58
+Output: "LVIII"
+Explanation: L = 50, V = 5, III = 3.
+
+Example 5:
+Input: 1994
+Output: "MCMXCIV"
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+```
+
+解法：
+
+　　
+
 ### 8 [](../java/com/ckm/number/Solution8.java)
 问题描述：
 

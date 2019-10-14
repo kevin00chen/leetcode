@@ -61,7 +61,9 @@ Output: "bb"
 　　(2) 回文字符串关于某个字符左右对称。所以，判断字符串是否为回文时可以从某个字符向两边扩展进行判断。对于`aba`和`abba`这种字符数分为奇偶的情况，有一种快捷方法，即对字符串进行扩展，
 如`#a#b#a#`或者`#a#b#b#a#`，在整个字符串开头和结尾，以及每个字符中间都加上`#`，就可以对任意长度字符串进行同样的处理逻辑。
 
-　　(3) 动态规划。如果父串位回文，那么里面的子串也必为回文，否则不成立。如下图所示：
+　　(3) 动态规划。
+
+　　如果父串位回文，那么里面的子串也必为回文，否则不成立。如下图所示：
 
 ![动态规划图解](./images/s5-1.png)
 
@@ -243,8 +245,74 @@ Output: false
 （2）动态规划
 　　
 
+### 13 [罗马数字转数字](../java/com/ckm/string/Solution13.java)
+问题描述：
 
-### 8 [](../java/com/ckm/string/Solution3.java)
+　　给定一个罗马数字符号表示的数字，将其转换为阿拉伯数字。
+
+示例：
+
+```
+Example 1:
+Input: "III"
+Output: 3
+
+Example 2:
+Input: "IV"
+Output: 4
+
+Example 3:
+Input: "IX"
+Output: 9
+
+Example 4:
+Input: "LVIII"
+Output: 58
+Explanation: L = 50, V= 5, III = 3.
+
+Example 5:
+Input: "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+```
+
+解法：
+
+　　略
+
+### 14 [字符串最长公共前缀](../java/com/ckm/string/Solution14.java)
+问题描述：
+
+　　找出若干字符串的最长公共字符串前缀序列，如果没有则返回""。给定字符串只由小写字母`a-z`组成。
+
+示例：
+
+```
+Example 1:
+Input: ["flower","flow","flight"]
+Output: "fl"
+
+Example 2:
+Input: ["dog","racecar","car"]
+Output: ""
+```
+
+解法：
+
+　　（1）暴力解法
+
+　　找到最短字符串的长度，依次遍历各字符串，字符全部相同则拼接到结果中，否则结束遍历。
+
+　　（2）遍历查找
+
+　　遍历全部字符串，查找第一个第二个字符串的公共子串后，再查找公共子串与第三个字符串的公告子串。
+
+　　（3）分治
+
+　　分治主要是基于上面的遍历查找，原问题，计算`LCP(S1, S2, ..., Sn)`可以拆解成`LCP(S1, Smid)`和`LCP(Smid, Sn)`即分成两个部分。
+最后再将这两部分的结果聚合一下即可。
+
+### 8 [](../java/com/ckm/string/Solution13.java)
 问题描述：
 
 　　
