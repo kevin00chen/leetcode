@@ -29,7 +29,7 @@
 | 2019-10-09 | [11](src/main/resources/array.md) |
 | 2019-10-10 | [287](src/main/resources/array.md), [12](src/main/resources/number.md) |
 | 2019-10-12 | [13](src/main/resources/string.md) |
-| 2019-10-14 | [14](src/main/resources/string.md), [15](src/main/resources/string.md) |
-| 2019-10-1 |  |
-| 2019-10-1 |  |
+| 2019-10-14 | [14](src/main/resources/string.md), [15](src/main/resources/array.md) |
+| 2019-10-15 | [16](src/main/resources/array.md) |
+| 2019-10-22 | [17](src/main/resources/string.md), [18](src/main/resources/array.md) |
 | 2019-10-1 |  |

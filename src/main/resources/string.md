@@ -312,7 +312,25 @@ Output: ""
 　　分治主要是基于上面的遍历查找，原问题，计算`LCP(S1, S2, ..., Sn)`可以拆解成`LCP(S1, Smid)`和`LCP(Smid, Sn)`即分成两个部分。
 最后再将这两部分的结果聚合一下即可。
 
-### 8 [](../java/com/ckm/string/Solution13.java)
+### 17 [](../java/com/ckm/string/Solution17.java)
+问题描述：
+
+　　给定一个由数字`2~9`组成的字符串，返回九宫格键盘上所有字母可能组成的字符串组合。九宫格键盘如下所示，
+
+![九宫格键盘示意图](images/s17-1.png)
+
+示例：
+
+```
+Input: "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+```
+
+解法：
+
+　　递归，从头到尾遍历输入字符串，解析每一个字符，该字符代表的符号依次与剩余字符串拼接。
+
+### 18 [](../java/com/ckm/string/Solution17.java)
 问题描述：
 
 　　

@@ -4,17 +4,39 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Solution15 {
+public class Solution18 {
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (nums.length < 4) {
+            return result;
+        }
+        Arrays.sort(nums);
 
-    public List<List<Integer>> threeSum(int[] nums) {
+        for (int i = 0; i < nums.length - 3; i ++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int t = target - nums[i];
+            List<List<Integer>> r = threeSum(Arrays.copyOfRange(nums, i + 1, nums.length), t);
+            for (List<Integer> l : r) {
+                List<Integer> r2 = new ArrayList<> ();
+                r2.add(nums[i]);
+                r2.addAll(l);
+                result.add(r2);
+            }
+        }
+
+        return result;
+    }
+
+
+    public List<List<Integer>> threeSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
         int len = nums.length;
 
         if (len < 3) {
             return result;
         }
-
-        Arrays.sort(nums);
 
         for (int i = 0; i < len - 2; i ++) {
             int start = i + 1;
@@ -27,9 +49,9 @@ public class Solution15 {
             while (start < end) {
                 int sum = nums[i] + nums[start] + nums[end];
 
-                if (sum > 0) {
+                if (sum > target) {
                     end --;
-                } else if (sum < 0) {
+                } else if (sum < target) {
                     start ++;
                 } else {
                     List<Integer> tmp = new ArrayList<>();
@@ -53,4 +75,5 @@ public class Solution15 {
 
         return result;
     }
+
 }

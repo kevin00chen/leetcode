@@ -12,7 +12,35 @@ import com.ckm.struct.LFUCache;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution14();
+        testSolution18();
+    }
+
+    private static void testSolution18() {
+        Solution18 solution = new Solution18();
+        // -1 0 2 3
+        Object x = solution.fourSum(new int[]{-1,-3,-2,2,3,-3,0,-4}, 4);
+        System.out.println();
+    }
+
+    private static void testSolution17() {
+        Solution17 solution = new Solution17();
+        Object x = solution.letterCombinations("23");
+        System.out.println();
+    }
+
+    private static void testSolution16() {
+        Solution16 solution16 = new Solution16();
+        int[] nums = new int[]{0, 1, 2};
+        // 1 9 70
+        int x = solution16.threeSumClosest(nums, 3);
+        System.out.println();
+    }
+
+    private static void testSolution15() {
+        Solution15 solution15 = new Solution15();
+        int[] nums = new int[]{-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6};
+        Object x = solution15.threeSum(nums);
+        System.out.println();
     }
 
     private static void testSolution14() {
