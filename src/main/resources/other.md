@@ -61,17 +61,43 @@ Output: 28
 　　动态规划，定义一个二维数组`fn[m][n]`，`fn[i][j]`表示到点`(i, j)`时的所有可能路径情况。那么`fn[m][n] = fn[m - 1][n] + fn[m][n - 1]`。
 需要注意一些特定点位的初始化。由于题目规定，只能往下或者往右走，所以，最左边一列以及最上面一行的值全部为1。
 
-### 18 [](../java/com/ckm/other/Solution17.java)
+### 63 [不同路径II](../java/com/ckm/other/Solution63.java)
 问题描述：
 
-　　
+　　有一个机器人位于`m x n`网格的左上角，每次只能往下或者往右移动一格。机器人需要从左上角`Start`移动到右下角的`Finish`处。
+和上面相比，新的网格中会有一些障碍物。求总共有多少种遍历路径。
+
+输入中用数字1表示障碍
+
+![示意图](./images/q_62.png)
+
+　　上图给定的是一个`7 x 3`的网格。给定的`m`和`n`不会超过100。
 
 示例：
 
+```
+Example 1:
+Input:
+[
+  [0,0,0],
+  [0,1,0],
+  [0,0,0]
+]
+Output: 2
+Explanation:
+There is one obstacle in the middle of the 3x3 grid above.
+There are two ways to reach the bottom-right corner:
+1. Right -> Right -> Down -> Down
+2. Down -> Down -> Right -> Right
+```
 
 解法：
 
-　　
+　　和上面类似，动态规划，定义一个二维数组`fn[m][n]`，`fn[i][j]`表示到点`(i, j)`时的所有可能路径情况。那么`fn[m][n] = fn[m - 1][n] + fn[m][n - 1]`。
+
+　　需要注意一些特定点位的初始化。由于题目规定，只能往下或者往右走，所以，最左边一列以及最上面一行的值全部为1。
+
+　　但是，最右边一列和最上面一行，当出现一个障碍物时，后续所有区域都不可达。并且，在后续遍历时，只判断没有障碍物的点。
 
 ### 18 [](../java/com/ckm/other/Solution17.java)
 问题描述：
