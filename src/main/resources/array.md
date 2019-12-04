@@ -193,6 +193,26 @@ A solution set is:
 
 　　和三数求和类似，直接套用三数求和的代码，将三数求和的结果由`0`改为输入的第一个数字相反数。
 
+### 53 [最大连续子数组和](../java/com/ckm/array/Solution1.java)
+问题描述：
+
+　　给定一个整数数组，找到其中和最大的一段连续子数组(最少包含一个数字)，返回sum值。
+可以尝试一下分治策略。
+
+示例：
+
+```
+Example:
+Input: [-2,1,-3,4,-1,2,1,-5,4],
+Output: 6
+Explanation: [4,-1,2,1] has the largest sum = 6.
+```
+
+解法：
+
+　　动态规划，递推关系式为`Math.max(fn[i - 1] + nums[i], nums[i])`
+
+
 ### 8 [](../java/com/ckm/array/Solution1.java)
 问题描述：
 

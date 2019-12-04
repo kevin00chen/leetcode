@@ -12,7 +12,14 @@ import com.ckm.struct.LFUCache;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution18();
+        testSolution53();
+    }
+
+    private static void testSolution53() {
+        Solution53 solution53 = new Solution53();
+        int[] x = new int[]{-2,1,-3,4};
+        int y = solution53.maxSubArray(x);
+        System.out.println();
     }
 
     private static void testSolution18() {
