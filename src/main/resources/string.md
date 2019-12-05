@@ -330,6 +330,128 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
 　　递归，从头到尾遍历输入字符串，解析每一个字符，该字符代表的符号依次与剩余字符串拼接。
 
+### 32 [最长有效括号](../java/com/ckm/string/Solution32.java)
+问题描述：
+
+　　给定一个只包含'('和')'组成的字符串，找到其中括号能够正常匹配的最长子字符串。
+
+示例：
+
+```
+Example 1:
+
+Input: "(()"
+Output: 2
+Explanation: The longest valid parentheses substring is "()"
+
+Example 2:
+
+Input: ")()())"
+Output: 4
+Explanation: The longest valid parentheses substring is "()()"
+```
+
+解法：
+
+　　动态规划
+
+### 44 [正则表达式匹配](../java/com/ckm/string/Solution44.java)
+问题描述：
+
+　　给定一个字符串，以及一个正则表达式，判断该正则表达式是否可以匹配字符串。正则表达式目前只包含'?'和'*'。与题目10相比，多了一个匹配符号?。
+
+- '?' 匹配任意的字符
+- '*' 表示0个或多个
+
+约束:
+s 可以为空，并且只包含小写字母a-z.
+p 可以为空，并且只包含小写字母a-z，以及?或者*。
+
+示例：
+
+```
+Example 1:
+Input:
+s = "aa"
+p = "a"
+Output: false
+Explanation: "a" does not match the entire string "aa".
+
+Example 2:
+Input:
+s = "aa"
+p = "*"
+Output: true
+Explanation: '*' matches any sequence.
+
+Example 3:
+Input:
+s = "cb"
+p = "?a"
+Output: false
+Explanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.
+
+Example 4:
+Input:
+s = "adceb"
+p = "*a*b"
+Output: true
+Explanation: The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
+
+Example 5:
+Input:
+s = "acdcb"
+p = "a*c?b"
+Output: false
+```
+
+解法：
+
+　　
+
+### 72 [编辑距离](../java/com/ckm/string/Solution72.java)
+问题描述：
+
+　　给定两个单词，找到由单词1变换成单词2的最少变换次数。每次只能变换一个字符，并且只能有以下三种变换方式：
+
+- 插入一个字符
+- 删除一个字符
+- 替换一个字符
+
+示例：
+
+```
+Example 1:
+Input: word1 = "horse", word2 = "ros"
+Output: 3
+Explanation: 
+horse -> rorse (replace 'h' with 'r')
+rorse -> rose (remove 'r')
+rose -> ros (remove 'e')
+
+Example 2:
+Input: word1 = "intention", word2 = "execution"
+Output: 5
+Explanation: 
+intention -> inention (remove 't')
+inention -> enention (replace 'i' with 'e')
+enention -> exention (replace 'n' with 'x')
+exention -> exection (replace 'n' with 'c')
+exection -> execution (insert 'u')
+```
+
+解法：
+
+　　动态规划，`fn[i][j]`表示长度为`i`的单词1转换为长度为`j`的单词2的编辑距离，接下来需要定义递推公式。
+
+- 当`word1[i] = word2[j]`时，`fn[i][j] = fn[i - 1][j - 1]`
+- 当`word1[i] != word2[j]`并且需要替换时，`fn[i][j] = fn[i - 1][j - 1] + 1`
+- 当`word1[i] != word2[j]`并且需要增加时，`fn[i][j] = fn[i][j - 1] + 1`
+- 当`word1[i] != word2[j]`并且需要删除时，`fn[i][j] = fn[i - 1][j] + 1`
+
+　　最少变化次数的递推关系式为：`fn[i][j] = min(fn[i][j] = fn[i - 1][j - 1], fn[i][j] = fn[i][j - 1], fn[i][j] = fn[i - 1][j]) + 1`
+　　或者`fn[i][j] = fn[i - 1][j - 1]`
+
 ### 18 [](../java/com/ckm/string/Solution17.java)
 问题描述：
 

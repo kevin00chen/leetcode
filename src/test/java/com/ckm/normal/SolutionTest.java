@@ -13,7 +13,13 @@ import com.ckm.struct.LFUCache;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution64();
+        testSolution72();
+    }
+
+    private static void testSolution72() {
+        Solution72 solution72 = new Solution72();
+        int x = solution72.minDistance("horse", "ros");
+        System.out.println();
     }
 
     public static void testSolution64() {
