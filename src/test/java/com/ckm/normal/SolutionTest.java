@@ -5,6 +5,7 @@ import com.ckm.common.ListNode;
 import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
+import com.ckm.other.Solution64;
 import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
@@ -12,7 +13,14 @@ import com.ckm.struct.LFUCache;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution53();
+        testSolution64();
+    }
+
+    public static void testSolution64() {
+        Solution64 solution64 = new Solution64();
+        int[][] grid = new int[][]{{1, 2, 3}, {4, 5, 6}};
+        int x = solution64.minPathSum(grid);
+        System.out.println();
     }
 
     private static void testSolution53() {
