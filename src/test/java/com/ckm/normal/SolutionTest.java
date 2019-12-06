@@ -13,7 +13,13 @@ import com.ckm.struct.LFUCache;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution72();
+        testSolution44();
+    }
+
+    private static void testSolution44() {
+        Solution44 solution44 = new Solution44();
+        boolean x = solution44.isMatch("aa", "*");
+        System.out.println();
     }
 
     private static void testSolution72() {
