@@ -9,11 +9,17 @@ import com.ckm.other.Solution64;
 import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
+import com.ckm.tree.Solution104;
 
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution32();
+        testSolution104();
+    }
+
+    private static void testSolution104() {
+        Solution104 solution104 = new Solution104();
+        solution104.maxDepth(null);
     }
 
     private static void testSolution32() {

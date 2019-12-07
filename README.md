@@ -34,4 +34,4 @@
 | 2019-10-22 | [17](src/main/resources/string.md), [18](src/main/resources/array.md) |
 | 2019-12-04 | [70](src/main/resources/other.md), [53](src/main/resources/array.md), [62](src/main/resources/other.md), [63](src/main/resources/other.md), [64](src/main/resources/other.md) |
 | 2019-12-05 | [44](src/main/resources/array.md), [72](src/main/resources/array.md) |
-| 2019-12-07 | [32](src/main/resources/array.md),  |
+| 2019-12-07 | [32](src/main/resources/array.md), [104](src/main/resources/tree.md) |
