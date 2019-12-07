@@ -13,7 +13,13 @@ import com.ckm.struct.LFUCache;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution44();
+        testSolution32();
+    }
+
+    private static void testSolution32() {
+        Solution32 solution32 = new Solution32();
+        int x = solution32.longestValidParentheses("(()))())(");
+        System.out.println();
     }
 
     private static void testSolution44() {
