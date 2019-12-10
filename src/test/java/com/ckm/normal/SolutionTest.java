@@ -2,6 +2,7 @@ package com.ckm.normal;
 
 import com.ckm.array.*;
 import com.ckm.common.ListNode;
+import com.ckm.common.TreeNode;
 import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
@@ -10,11 +11,19 @@ import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
 import com.ckm.tree.Solution104;
+import com.ckm.tree.Solution108;
 
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution104();
+        boolean x = Math.abs(2 - 3) <= 1;
+        testSolution108();
+    }
+
+    private static void testSolution108() {
+        Solution108 solution108 = new Solution108();
+        TreeNode x = solution108.sortedArrayToBST(new int[]{-10,-3,0,5,9});
+        System.out.println();
     }
 
     private static void testSolution104() {
