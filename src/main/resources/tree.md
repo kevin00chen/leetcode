@@ -166,7 +166,7 @@ return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
 
 解法：
 
-　　
+　　递归，退出条件为，当前节点左右都为空，需要`sum == root.val`，如果左为空，需要右子树满足条件，如果右为空，需要左子树满足条件。
 
 ### 8 [](../java/com/ckm/tree/Solution1.java)
 问题描述：

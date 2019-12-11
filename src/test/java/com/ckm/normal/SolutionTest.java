@@ -12,12 +12,66 @@ import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
 import com.ckm.tree.Solution104;
 import com.ckm.tree.Solution108;
+import com.ckm.tree.Solution112;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class SolutionTest {
 
     public static void main(String[] args) {
-        boolean x = Math.abs(2 - 3) <= 1;
-        testSolution108();
+        testSolution112();
+    }
+
+    private static void testSolution112() {
+        TreeNode root = stringToTreeNode("[5,4,8,11,null,13,4,7,2,null,null,null,1]");
+        Solution112 solution112 = new Solution112();
+        boolean x = solution112.hasPathSum(root, 22);
+        System.out.println();
+    }
+
+    private static TreeNode stringToTreeNode(String input) {
+        input = input.trim();
+        input = input.substring(1, input.length() - 1);
+        if (input.length() == 0) {
+            return null;
+        }
+
+        String[] parts = input.split(",");
+        String item = parts[0];
+        TreeNode root = new TreeNode(Integer.parseInt(item));
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
+        nodeQueue.add(root);
+
+        int index = 1;
+        while(!nodeQueue.isEmpty()) {
+            TreeNode node = nodeQueue.remove();
+
+            if (index == parts.length) {
+                break;
+            }
+
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int leftNumber = Integer.parseInt(item);
+                node.left = new TreeNode(leftNumber);
+                nodeQueue.add(node.left);
+            }
+
+            if (index == parts.length) {
+                break;
+            }
+
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int rightNumber = Integer.parseInt(item);
+                node.right = new TreeNode(rightNumber);
+                nodeQueue.add(node.right);
+            }
+        }
+        return root;
     }
 
     private static void testSolution108() {
