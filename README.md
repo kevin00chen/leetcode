@@ -39,4 +39,3 @@
 | 2019-12-07 | [32](src/main/resources/array.md), [104](src/main/resources/tree.md) |
 | 2019-12-10 | [107](src/main/resources/tree.md), [108](src/main/resources/tree.md), [111](src/main/resources/tree.md) |
 | 2019-12-11 | [110](src/main/resources/tree.md), [112](src/main/resources/tree.md) |
-
