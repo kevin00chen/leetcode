@@ -168,6 +168,61 @@ return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
 
 　　递归，退出条件为，当前节点左右都为空，需要`sum == root.val`，如果左为空，需要右子树满足条件，如果右为空，需要左子树满足条件。
 
+### 235 [二叉树(BST)中节点的最近父节点(LCA)](../java/com/ckm/tree/Solution235.java)
+问题描述：
+
+　　给定一个二叉搜索树(BST)，找到给定两个节点最近的公共父节点(lowest common ancestor, LCA)。节点可以为自己的父节点。
+
+给定一个二叉树:  root = [6,2,8,0,4,7,9,null,null,3,5]，其结构如下图所示
+
+![二叉搜索树](./images/q_235.png)
+
+示例：
+
+```
+Example 1:
+Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+Output: 6
+Explanation: The LCA of nodes 2 and 8 is 6.
+
+Example 2:
+Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
+Output: 2
+Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.
+ 
+```
+
+所有节点的值都是唯一的，`p`和`q`是给定树中已存在的两个不相同的值。
+需要注意的是二叉搜索树某个节点如果左子树不为空，则左子树上的任意节点值都比根节点小，如果右子树不为空，则任意右子树节点值都比根节点大。
+
+解法：
+
+　　需要注意BST的特性，即左子树都比根小，右子树都比根大。这样就可以根据`p`和`q`的节点值递归到子树上去寻找父节点。
+
+### 8 [](../java/com/ckm/tree/Solution1.java)
+问题描述：
+
+　　
+
+示例：
+
+
+解法：
+
+　　
+
+### 8 [](../java/com/ckm/tree/Solution1.java)
+问题描述：
+
+　　
+
+示例：
+
+
+解法：
+
+　　
+
 ### 8 [](../java/com/ckm/tree/Solution1.java)
 问题描述：
 
