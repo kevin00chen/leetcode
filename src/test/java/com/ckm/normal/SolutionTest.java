@@ -13,6 +13,7 @@ import com.ckm.struct.LFUCache;
 import com.ckm.tree.Solution104;
 import com.ckm.tree.Solution108;
 import com.ckm.tree.Solution112;
+import com.ckm.tree.Solution257;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -20,7 +21,14 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution112();
+        testSolution257();
+    }
+
+    private static void testSolution257() {
+        TreeNode root = stringToTreeNode("[1,2,3,null,5]");
+        Solution257 solution257 = new Solution257();
+        Object x = solution257.binaryTreePaths(root);
+        System.out.println();
     }
 
     private static void testSolution112() {

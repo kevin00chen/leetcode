@@ -199,6 +199,45 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
 
 　　需要注意BST的特性，即左子树都比根小，右子树都比根大。这样就可以根据`p`和`q`的节点值递归到子树上去寻找父节点。
 
+### 257 [二叉树的遍历路径](../java/com/ckm/tree/Solution257.java)
+问题描述：
+
+　　给定一个二叉树，返回其所有从根节点到叶子节点的遍历路径。
+
+示例：
+
+```
+Example:
+
+Input:
+
+   1
+ /   \
+2     3
+ \
+  5
+
+Output: ["1->2->5", "1->3"]
+
+Explanation: All root-to-leaf paths are: 1->2->5, 1->3
+```
+
+解法：
+
+　　递归，
+
+### 8 [](../java/com/ckm/tree/Solution1.java)
+问题描述：
+
+　　
+
+示例：
+
+
+解法：
+
+　　
+
 ### 8 [](../java/com/ckm/tree/Solution1.java)
 问题描述：
 
