@@ -349,17 +349,33 @@ Output: false
 
 　　递归，略。太简单。
 
-### 8 [](../java/com/ckm/tree/Solution1.java)
+### 559 [N叉树的最大深度](../java/com/ckm/tree/Solution559.java)
 问题描述：
 
-　　
+　　给定一个N叉树，计算其最大深度。最大深度是指，在从根节点遍历到叶子节点的所有不同路径中，经过节点数最多的那条路径上的节点数。
+
+　　N叉树的深度小于1000，并且节点值在`[0, 10^4]`之间。
+
 
 示例：
 
+![示例一](images/q_559_1.png)
+
+```
+Input: root = [1,null,3,2,4,null,5,6]
+Output: 3
+```
+
+![示例二](images/q_559_2.png)
+
+```
+Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+Output: 5
+```
 
 解法：
 
-　　
+　　递归，参考第104题，二叉树的最大深度。N叉树的最大深度为子树最大深度加1。
 
 ### 8 [](../java/com/ckm/tree/Solution1.java)
 问题描述：
