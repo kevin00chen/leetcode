@@ -226,29 +226,65 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 
 　　递归，
 
-### 8 [](../java/com/ckm/tree/Solution1.java)
+### 700 [BST树搜索](../java/com/ckm/tree/Solution700.java)
 问题描述：
 
-　　
+　　给定一个二叉搜索树，以及一个值。从BST中找到值为给定值的那个节点。如果找不到则返回NULL。
 
 示例：
 
+```
+Given the tree:
+        4
+       / \
+      2   7
+     / \
+    1   3
+
+And the value to search: 2
+You should return this subtree:
+
+      2     
+     / \   
+    1   3
+```
+
+　　上面这个示例中，如果给定值为`5`，则返回`NULL`。
 
 解法：
 
-　　
+　　超简单，递归。略
 
-### 8 [](../java/com/ckm/tree/Solution1.java)
+### 590 [N叉树的后序遍历](../java/com/ckm/tree/Solution590.java)
 问题描述：
 
-　　
+　　给定一个n叉树，返回节点的后序遍历值。即先遍历左子树，然后遍历右子树，最后遍历根节点的顺序。
+
+　　递归的方式相对简单，尝试一下循环如何实现。
 
 示例：
 
+![示例一](images/q_590_1.png)
+
+```
+Input: root = [1,null,3,2,4,null,5,6]
+Output: [5,6,3,2,4,1]
+```
+
+![示例二](images/q_590_2.png)
+
+```
+Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+Output: [2,6,14,11,7,3,12,8,4,13,9,10,5,1]
+```
+
+　　约束条件：
+- 树的高度小于1000
+- 总节点数介于`[0, 10^4]`之间
 
 解法：
 
-　　
+　　递归，略
 
 ### 8 [](../java/com/ckm/tree/Solution1.java)
 问题描述：
