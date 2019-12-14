@@ -1,4 +1,4 @@
-package com.ckm.tree;
+package com.ckm.tree.easy;
 
 import com.ckm.common.TreeNode;
 

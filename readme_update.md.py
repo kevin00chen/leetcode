@@ -1,6 +1,3 @@
-#cnt=`grep -o '\[\d\{1,\}\](src/main/resources/\w\{1,\}.md)' README.md | wc -l`
-#sed -ig "s/累计总数: *[0-9]*$/累计总数: $cnt/" README.md
-
 import os
 import datetime
 
@@ -30,7 +27,7 @@ def add_solutions():
         print('xx')
     for file in files:
         type = file.split('/')[5]
-        num = int(file.split('/')[6].split('.java')[0].replace('Solution', ''))
+        num = int(file.split('/')[7].split('.java')[0].replace('Solution', ''))
         new_files[num] = type
 
     if new_files: # 如果有新文件，则更新README.md

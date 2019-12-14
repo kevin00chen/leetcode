@@ -10,10 +10,7 @@ import com.ckm.other.Solution64;
 import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
-import com.ckm.tree.Solution104;
-import com.ckm.tree.Solution108;
-import com.ckm.tree.Solution112;
-import com.ckm.tree.Solution257;
+import com.ckm.tree.easy.*;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -21,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution257();
+        testSolution897();
+    }
+
+    private static void testSolution897() {
+        Solution897 solution897 = new Solution897();
+        TreeNode t = solution897.increasingBST(stringToTreeNode("[5,3,6,2,4,null,8,1,null,null,null,7,9]"));
+        System.out.println();
     }
 
     private static void testSolution257() {

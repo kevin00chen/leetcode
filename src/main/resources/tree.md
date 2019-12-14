@@ -2,7 +2,7 @@
 
 [TOC]
 
-### 104 [二叉树的最大深度](../java/com/ckm/tree/Solution104.java)
+### 104 [二叉树的最大深度](../java/com/ckm/tree/easy/Solution104.java)
 问题描述：
 
 　　给定一个二叉树，计算其最大深度。二叉树的最大深度是指该二叉树从根节点到最远的那个叶子节点最大长度上所经过的节点数。
@@ -26,7 +26,7 @@ return its depth = 3.
 
 　　递归，当前节点为`null`时返回`0`，否则，结果为其左右子树的最大深度加1.
 
-### 107 [二叉树自底向上按层遍历II](../java/com/ckm/tree/Solution107.java)
+### 107 [二叉树自底向上按层遍历II](../java/com/ckm/tree/easy/Solution107.java)
 问题描述：
 
 　　给定一个二叉树，从底向上返回其各层节点上的节点值。（从叶子节点开始，从左往右遍历）
@@ -53,7 +53,7 @@ return its bottom-up level order traversal as:
 
 　　递归，需要注意最后要将`List`进行翻转。
 
-### 108 [有序数组转化成树](../java/com/ckm/tree/Solution108.java)
+### 108 [有序数组转化成树](../java/com/ckm/tree/easy/Solution108.java)
 问题描述：
 
 　　给定一个升序排列的数组，将其转化成一个"height balanced"二叉树。
@@ -79,7 +79,7 @@ return its bottom-up level order traversal as:
 
 　　递归，首先计算数组的长度，每次对数组进行二分，即将元素分为左右两边大致相等的节点数。
   
-### 110 [平衡二叉树](../java/com/ckm/tree/Solution110.java)
+### 110 [平衡二叉树](../java/com/ckm/tree/easy/Solution110.java)
 问题描述：
 
 　　给定一个二叉树，判断它是不是"height-balanced"，
@@ -117,7 +117,7 @@ Return false.
 
 　　递归，分别遍历左右子节点，每次路径长度加1，每次树是否为平衡树的判断时，由当前节点是否平衡与子树是否平衡共同判断。
 
-### 111 [二叉树最小深度](../java/com/ckm/tree/Solution111.java)
+### 111 [二叉树最小深度](../java/com/ckm/tree/easy/Solution111.java)
 问题描述：
 
 　　给定一个二叉树，找到其最小深度。
@@ -142,7 +142,7 @@ return its minimum depth = 2.
 
 　　递归，左右子树深度谁小取谁。但是如果只有一个子树，就取该子树的深度。
 
-### 112 [二叉树路径和](../java/com/ckm/tree/Solution112.java)
+### 112 [二叉树路径和](../java/com/ckm/tree/easy/Solution112.java)
 问题描述：
 
 　　给定一个二叉树，以及一个数字。判断给定二叉树从根节点遍历到叶子节点的所有路径中，有没有哪条路径上所有节点值的和等于给定数字。
@@ -168,7 +168,7 @@ return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
 
 　　递归，退出条件为，当前节点左右都为空，需要`sum == root.val`，如果左为空，需要右子树满足条件，如果右为空，需要左子树满足条件。
 
-### 235 [二叉树(BST)中节点的最近父节点(LCA)](../java/com/ckm/tree/Solution235.java)
+### 235 [二叉树(BST)中节点的最近父节点(LCA)](../java/com/ckm/tree/easy/Solution235.java)
 问题描述：
 
 　　给定一个二叉搜索树(BST)，找到给定两个节点最近的公共父节点(lowest common ancestor, LCA)。节点可以为自己的父节点。
@@ -199,7 +199,7 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
 
 　　需要注意BST的特性，即左子树都比根小，右子树都比根大。这样就可以根据`p`和`q`的节点值递归到子树上去寻找父节点。
 
-### 257 [二叉树的遍历路径](../java/com/ckm/tree/Solution257.java)
+### 257 [二叉树的遍历路径](../java/com/ckm/tree/easy/Solution257.java)
 问题描述：
 
 　　给定一个二叉树，返回其所有从根节点到叶子节点的遍历路径。
@@ -226,7 +226,7 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 
 　　递归，
 
-### 700 [BST树搜索](../java/com/ckm/tree/Solution700.java)
+### 700 [BST树搜索](../java/com/ckm/tree/easy/Solution700.java)
 问题描述：
 
 　　给定一个二叉搜索树，以及一个值。从BST中找到值为给定值的那个节点。如果找不到则返回NULL。
@@ -255,7 +255,7 @@ You should return this subtree:
 
 　　超简单，递归。略
 
-### 590 [N叉树的后序遍历](../java/com/ckm/tree/Solution590.java)
+### 590 [N叉树的后序遍历](../java/com/ckm/tree/easy/Solution590.java)
 问题描述：
 
 　　给定一个n叉树，返回节点的后序遍历值。即先遍历左子树，然后遍历右子树，最后遍历根节点的顺序。
@@ -288,7 +288,7 @@ Output: [2,6,14,11,7,3,12,8,4,13,9,10,5,1]
 
 　　由于顺序是从最底层开始，由左到右，最后根节点。但是从根节点往下遍历时是根节点最先取得，所以应该可以想到需要借助于栈的先进后出特性。
 
-### 589 [N叉树的前序遍历](../java/com/ckm/tree/Solution589.java)
+### 589 [N叉树的前序遍历](../java/com/ckm/tree/easy/Solution589.java)
 问题描述：
 
 　　给定一个N叉树，返回其节点值的前序遍历结果。
@@ -322,7 +322,7 @@ Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 　　遍历顺序是从根节点开始，然后下一层的最左边根节点，然后从左到右依次遍历。这里仍然使用栈作为中间工具，
 需要注意的是，如果按照从左到右的顺序，那么在返回结果时下一层的弹出顺序是从右到左，和期望相反。所以，在遍历子节点时，可以考虑从后往前遍历。
 
-### 965 [二叉树是否统一值](../java/com/ckm/tree/Solution965.java)
+### 965 [二叉树是否统一值](../java/com/ckm/tree/easy/Solution965.java)
 问题描述：
 
 　　如果一个二叉树的每一个节点值都相同，则称该树"univalued"。判断一个二叉树是否"univalued"。
@@ -349,7 +349,7 @@ Output: false
 
 　　递归，略。太简单。
 
-### 559 [N叉树的最大深度](../java/com/ckm/tree/Solution559.java)
+### 559 [N叉树的最大深度](../java/com/ckm/tree/easy/Solution559.java)
 问题描述：
 
 　　给定一个N叉树，计算其最大深度。最大深度是指，在从根节点遍历到叶子节点的所有不同路径中，经过节点数最多的那条路径上的节点数。
@@ -377,7 +377,59 @@ Output: 5
 
 　　递归，参考第104题，二叉树的最大深度。N叉树的最大深度为子树最大深度加1。
 
-### 8 [](../java/com/ckm/tree/Solution1.java)
+### 897 [BST的结构变换](../java/com/ckm/tree/easy/Solution897.java)
+问题描述：
+
+　　给定一个二叉搜索树，调整树结构，使得最左边的节点变成根节点，并且每一个节点都没有左子节点，只有一个右子节点。
+
+　　给定二叉树的限制条件如下，
+- 树中的节点数不超过100
+- 每一个节点的值为不重复的1000以内的数字
+
+示例：
+
+```
+Example 1:
+Input: [5,3,6,2,4,null,8,1,null,null,null,7,9]
+
+       5
+      / \
+    3    6
+   / \    \
+  2   4    8
+ /        / \ 
+1        7   9
+
+Output: [1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9]
+
+ 1
+  \
+   2
+    \
+     3
+      \
+       4
+        \
+         5
+          \
+           6
+            \
+             7
+              \
+               8
+                \
+                 9  
+```
+
+解法：
+
+　　实际上是将BST进行中序遍历顺序的调整。
+
+　　另外可以使用递归对问题进行拆解，
+- 如果左子树为空，直接调整右子树。
+- 如果左子树不为空，则调整左子树，然后使左子树最后一个节点指向当前节点，然后调整右子树，使当前节点指向调整后右子树的根节点。
+
+### 8 [](../java/com/ckm/tree/easy/Solution1.java)
 问题描述：
 
 　　
@@ -389,7 +441,7 @@ Output: 5
 
 　　
 
-### 8 [](../java/com/ckm/tree/Solution1.java)
+### 8 [](../java/com/ckm/tree/easy/Solution1.java)
 问题描述：
 
 　　
@@ -401,7 +453,7 @@ Output: 5
 
 　　
 
-### 8 [](../java/com/ckm/tree/Solution1.java)
+### 8 [](../java/com/ckm/tree/easy/Solution1.java)
 问题描述：
 
 　　
@@ -413,19 +465,7 @@ Output: 5
 
 　　
 
-### 8 [](../java/com/ckm/tree/Solution1.java)
-问题描述：
-
-　　
-
-示例：
-
-
-解法：
-
-　　
-
-### 8 [](../java/com/ckm/tree/Solution1.java)
+### 8 [](../java/com/ckm/tree/easy/Solution1.java)
 问题描述：
 
 　　
