@@ -496,25 +496,167 @@ Output:
 
 　　递归，分三种情况讨论。略
 
-### 8 [](../java/com/ckm/tree/easy/Solution1.java)
+### 637 [二叉树按层求平均](../java/com/ckm/tree/easy/Solution637.java)
+问题描述：
+
+　　给定一个非空二叉树，返回每一层节点值的平均值数组。节点值是32位整数范围。
+
+示例：
+
+```
+Example 1:
+Input:
+    3
+   / \
+  9  20
+    /  \
+   15   7
+Output: [3, 14.5, 11]
+```
+
+解法：
+
+　　二叉树的广度优先遍历，借助队列。难度在于如何确定每层的节点数，每次取元素时首先判断队列中元素的个数，全部取出来，然后把下一层放进去。
+
+### 653 [BST的两个节点求和](../java/com/ckm/tree/easy/Solution653.java)
+问题描述：
+
+　　给定两个BST以及一个目标数字，如果BST中存在两个节点其和为目标数字，则返回true，否则返回false。
+
+示例：
+
+```
+Example 1:
+
+Input: 
+    5
+   / \
+  3   6
+ / \   \
+2   4   7
+
+Target = 9
+
+Output: True
+
+Example 2:
+
+Input: 
+    5
+   / \
+  3   6
+ / \   \
+2   4   7
+
+Target = 28
+
+Output: False
+```
+
+解法：
+
+　　首先使用递归，将BST节点值按中序遍历转换为List，然后判断有序数组中是否存在两个数字之和为给定数值。
+
+### 3 [](../java/com/ckm/tree/easy/Solution3.java)
 问题描述：
 
 　　
 
 示例：
 
+```
+
+```
 
 解法：
 
 　　
 
-### 8 [](../java/com/ckm/tree/easy/Solution1.java)
+### 3 [](../java/com/ckm/tree/easy/Solution3.java)
 问题描述：
 
 　　
 
 示例：
 
+```
+
+```
+
+解法：
+
+　　
+
+### 3 [](../java/com/ckm/tree/easy/Solution3.java)
+问题描述：
+
+　　
+
+示例：
+
+```
+
+```
+
+解法：
+
+　　
+
+### 3 [](../java/com/ckm/tree/easy/Solution3.java)
+问题描述：
+
+　　
+
+示例：
+
+```
+
+```
+
+解法：
+
+　　
+
+### 3 [](../java/com/ckm/tree/easy/Solution3.java)
+问题描述：
+
+　　
+
+示例：
+
+```
+
+```
+
+解法：
+
+　　
+
+### 3 [](../java/com/ckm/tree/easy/Solution3.java)
+问题描述：
+
+　　
+
+示例：
+
+```
+
+```
+
+解法：
+
+　　
+
+### 3 [](../java/com/ckm/tree/easy/Solution3.java)
+问题描述：
+
+　　
+
+示例：
+
+```
+
+```
 
 解法：
 
