@@ -557,20 +557,33 @@ Output: False
 
 　　首先使用递归，将BST节点值按中序遍历转换为List，然后判断有序数组中是否存在两个数字之和为给定数值。
 
-### 3 [](../java/com/ckm/tree/easy/Solution3.java)
+### 538 [BST转换为Greater Tree](../java/com/ckm/tree/easy/Solution538.java)
 问题描述：
 
-　　
+　　给定一个BST，将其转换成Greater Tree。树的结构保持不变，节点值变为原始BST中节点值比当前节点值大的所有值的和。不好理解的话，看下面的示例，
 
 示例：
 
 ```
+Example:
 
+Input: The root of a Binary Search Tree like this:
+              5
+            /   \
+           2     13
+
+Output: The root of a Greater Tree like this:
+             18
+            /   \
+          20     13
 ```
 
 解法：
 
-　　
+　　遍历BST，更新每一个节点上的值，分以下两种情况，
+
+- 如果当前节点是父节点的左子节点，新节点值 = 当前节点值 + 右子树值 + 父节点值。
+- 如果当前节点是父节点的右子节点，新节点值 = (当前节点值 + 右子树值) 父节点新值 - 父节点旧值。
 
 ### 3 [](../java/com/ckm/tree/easy/Solution3.java)
 问题描述：

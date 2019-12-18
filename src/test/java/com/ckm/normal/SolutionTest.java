@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution897();
+        testSolution538();
+    }
+
+    private static void testSolution538() {
+        Solution538 solution538 = new Solution538();
+        TreeNode node = solution538.convertBST(stringToTreeNode("[2,0,3,-4,1]"));
+        System.out.println();
     }
 
     private static void testSolution897() {
