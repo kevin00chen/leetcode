@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution538();
+        testSolution687();
+    }
+
+    private static void testSolution687() {
+        Solution687 solution687 = new Solution687();
+        int x = solution687.longestUnivaluePath(stringToTreeNode("[1,null,1,1,1,1,1,1]"));
+        System.out.println();
     }
 
     private static void testSolution538() {
