@@ -602,22 +602,48 @@ Output: The root of a Greater Tree like this:
 
 解法：
 
-　　
+　　深度优先遍历两个二叉树，将所有叶子节点添加到数组中，比较两个数组是否一致。
 
-### 3 [](../java/com/ckm/tree/easy/Solution3.java)
+### 501 [](../java/com/ckm/tree/easy/Solution501.java)
 问题描述：
 
-　　
+Find Mode in Binary Search Tree
+
+　　给定一个有重复数字的BST树，找到该BST中所有重复出现次数最多的数字。
+
+Given a binary search tree (BST) with duplicates, find all the mode(s) (the most frequently occurred element) in the given BST.
+
+BST的定义是，对于每一个节点：
+
+- 节点的左子树上任意节点值都小于等于根节点值
+- 节点的右子树上任意节点值都大于等于根节点值
+
+　　如果有多个出现次数最多的数字，可以不用按顺序返回。
+
+　　可以尝试一下使用O(0)空间复杂度的算法
+Follow up: Could you do that without using any extra space? (Assume that the implicit stack space incurred due to recursion does not count).
 
 示例：
 
 ```
+For example:
+Given BST [1,null,2,2],
 
+   1
+    \
+     2
+    /
+   2
+
+return [2].
 ```
 
 解法：
 
-　　
+　　最简单的办法是使用一个Map，然后遍历BST，记录并更新每个值出现的次数。但是考虑到不额外使用空间，舍弃这种做法。
+
+　　采用中序遍历的方式，定义两个变量，一个计算重复数字的次数，一个计算最大重复次数。当当前节点值的计数大于max时，更新当前modes，当计数等于max时，
+modes中添加一个新数值。
 
 ### 3 [](../java/com/ckm/tree/easy/Solution3.java)
 问题描述：
