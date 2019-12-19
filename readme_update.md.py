@@ -3,6 +3,21 @@ import datetime
 
 git_content = ""
 
+new_q_template = """
+### number [description]()
+问题描述：
+
+　　
+
+示例：
+
+\`\`\`
+
+\`\`\`
+
+解法：
+
+　　"""
 
 def update_resolve_num():
     cmd = "grep -o '\[\d\{1,\}\](src/main/resources/\w\{1,\}.md)' README.md | wc -l"
@@ -26,10 +41,19 @@ def add_solutions():
     files = os.popen(cmd).readlines()
 
     new_files = {}
+    update_md_files = []
     for file in files:
         type = file.split('/')[5]
+        md_file = "src/main/resources/" + type + ".md"
+        update_md_files.append(md_file)
         num = int(file.split('/')[7].split('.java')[0].replace('Solution', ''))
+        cmd = "sed -ig \"s/^### " + str(num) + " \[\(.*\)\]()$/### " + str(num) + " \[\\1\]\(" + file.replace('src/main', '..').replace('/', '\/').replace('\n', '') +  "\)/\" " + md_file
+        os.system(cmd)
         new_files[num] = type
+
+    for md_file in set(update_md_files):
+        cmd = "echo \"" + new_q_template + "\" >> " + md_file
+        os.system(cmd)
 
     if new_files:  # 如果有新文件，则更新README.md
         content = ""

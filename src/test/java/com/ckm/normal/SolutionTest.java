@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution538();
+        testSolution606();
+    }
+
+    private static void testSolution606() { // [1,2,3,null,4] 1(2()(4))(3), [1,2,3,4] 1(2(4))(3)
+        Solution606 solution606 = new Solution606();
+        String x = solution606.tree2str(stringToTreeNode("[1,2,3,null,4]"));
+        System.out.println();
     }
 
     private static void testSolution538() {
