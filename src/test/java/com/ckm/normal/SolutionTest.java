@@ -18,12 +18,12 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution606();
+        testSolution687();
     }
 
-    private static void testSolution606() { // [1,2,3,null,4] 1(2()(4))(3), [1,2,3,4] 1(2(4))(3)
-        Solution606 solution606 = new Solution606();
-        String x = solution606.tree2str(stringToTreeNode("[1,2,3,null,4]"));
+    private static void testSolution687() {
+        Solution687 solution687 = new Solution687();
+        int x = solution687.longestUnivaluePath(stringToTreeNode("[1,null,1,1,1,1,1,1]"));
         System.out.println();
     }
 
