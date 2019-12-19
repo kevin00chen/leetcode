@@ -3,35 +3,34 @@ package com.ckm.tree.easy;
 import com.ckm.common.TreeNode;
 
 public class Solution687 {
-    int count = 0;
-    int max = 0;
-    Integer pre = null;
-
+    int ans;
     public int longestUnivaluePath(TreeNode root) {
-        inOrder(root);
-        return max > 1 ? max - 1 : 0;
+        ans = 0;
+        arrowLength(root);
+        return ans;
     }
 
-    private void inOrder(TreeNode root) {
-        if (root != null) {
-            inOrder(root.left);
-
-            if (pre == null) {
-                count = 1;
-            } else {
-                if (root.val == pre) {
-                    count ++;
-                } else {
-                    count = 1;
-                }
-            }
-
-            if (count > max) {
-                max = count;
-            }
-
-            pre = root.val;
-            inOrder(root.right);
+    public int arrowLength(TreeNode node) {
+        if (node == null) {
+            return 0;
         }
+
+        int left = arrowLength(node.left);
+        int right = arrowLength(node.right);
+
+        int arrowLeft = 0;
+        int arrowRight = 0;
+
+        if (node.left != null && node.left.val == node.val) {
+            arrowLeft += left + 1;
+        }
+        if (node.right != null && node.right.val == node.val) {
+            arrowRight += right + 1;
+        }
+
+        // 相同路径可以通过根节点。并且只有根节点值同时等于左子节点值以及右子节点值时才会出现两边都不为0的情况。否则，总有一边为0.
+        ans = Math.max(ans, arrowLeft + arrowRight);
+
+        return Math.max(arrowLeft, arrowRight);
     }
 }

@@ -18,7 +18,7 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution530();
+        testSolution687();
     }
 
     private static void testSolution530() { // 519
