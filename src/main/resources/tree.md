@@ -582,7 +582,7 @@ Output: The root of a Greater Tree like this:
 
 　　遍历BST，更新每一个节点上的值，先计算右子树的和，然后计算根节点，最后计算左子树。最终整个BST最左边叶子节点值为整棵BST全部节点值之和。
 
-### 606 [二叉树转换为字符串输出]()
+### 606 [二叉树转换为字符串输出](../java/com/ckm/tree/easy/Solution606.java)
 问题描述：
 
 　　给定一个二叉树，将其按照前序方式转换为一个字符串，左右子节点在根节点数字后面的`()`中，null节点用`()`表示。另外，还需要去除无用的`()`。
@@ -622,3 +622,18 @@ except we can't omit the first parenthesis pair to break the one-to-one mapping 
 解法：
 
 　　前序遍历，递归处理
+
+### number [description]()
+问题描述：
+
+　　
+
+示例：
+
+```
+
+```
+
+解法：
+
+　　
