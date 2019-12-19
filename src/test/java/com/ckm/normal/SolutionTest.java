@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution687();
+        testSolution530();
+    }
+
+    private static void testSolution530() { // 519
+        Solution530 solution530 = new Solution530();
+        int x = solution530.getMinimumDifference(stringToTreeNode("[0,null,2236,1277,2776,519]"));
+        System.out.println();
     }
 
     private static void testSolution687() {

@@ -623,7 +623,36 @@ except we can't omit the first parenthesis pair to break the one-to-one mapping 
 
 　　前序遍历，递归处理
 
-### number [description]()
+### 530 [计算BST任意节点间最小差值](../java/com/ckm/tree/easy/Solution530.java)
+问题描述：
+
+　　给定一个非负值BST，找到其中最小的节点差值。节点无需连续。
+
+示例：
+
+```
+Example:
+
+Input:
+
+   1
+    \
+     3
+    /
+   2
+
+Output:
+1
+
+Explanation:
+The minimum absolute difference is 1, which is the difference between 2 and 1 (or between 2 and 3).
+```
+
+解法：
+
+　　根据BST的特性，所有左子节点都比当前节点值小，所有右子节点都比当前节点值大。所以，最小差值一定在最左右子节点-根节点，或者根节点-最右左子节点中产生。
+
+### number []()
 问题描述：
 
 　　

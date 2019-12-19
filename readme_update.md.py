@@ -4,7 +4,7 @@ import datetime
 git_content = ""
 
 new_q_template = """
-### number [description]()
+### number []()
 问题描述：
 
 　　
