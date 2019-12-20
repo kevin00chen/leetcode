@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution687();
+        testSolution404();
+    }
+
+    private static void testSolution404() {
+        Solution404 solution404 = new Solution404();
+        int x = solution404.sumOfLeftLeaves(stringToTreeNode("[3,9,20,null,null,15,7]"));
+        System.out.println();
     }
 
     private static void testSolution530() { // 519

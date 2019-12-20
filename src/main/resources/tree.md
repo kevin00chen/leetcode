@@ -772,7 +772,7 @@ Output: false
 
 　　分别判断给定的`x`和`y`是否在同一深度，以及是否是同一根节点下的子节点。
 
-### 783 [](../java/com/ckm/tree/easy/Solution783.java)
+### 783 [BST节点最小差](../java/com/ckm/tree/easy/Solution783.java)
 问题描述：
 
 　　给定一个BST，返回二叉树中任意节点之间最小的差值。
@@ -800,6 +800,29 @@ The given tree [4,2,6,1,3,null,null] is represented by the following diagram:
 解法：
 
 　　最小值只会出现在根节点与最右左子节点之间，或者根节点与最左右子节点之间。遍历这棵树，用一个变量维持最小值即可。
+
+### 404 [二叉树叶子节点求和](../java/com/ckm/tree/easy/Solution404.java)
+问题描述：
+
+　　对给定的二叉树所有左叶子节点求和。
+
+示例：
+
+```
+Example:
+
+    3
+   / \
+  9  20
+    /  \
+   15   7
+
+There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.
+```
+
+解法：
+
+　　遍历二叉树，当节点左右都为null，并且是上一层的左节点时，才更新sum。否则递归遍历左子树以及右子树。
 
 ### number []()
 问题描述：
