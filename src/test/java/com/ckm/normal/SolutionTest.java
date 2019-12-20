@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution404();
+        testSolution543();
+    }
+
+    private static void testSolution543() {
+        Solution543 solution543 = new Solution543();
+        int x = solution543.diameterOfBinaryTree(stringToTreeNode("[1,2,3,4,5]"));
+        System.out.println();
     }
 
     private static void testSolution404() {
