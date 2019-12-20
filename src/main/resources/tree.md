@@ -733,6 +733,45 @@ The minimum absolute difference is 1, which is the difference between 2 and 1 (o
 
 　　根据BST的特性，所有左子节点都比当前节点值小，所有右子节点都比当前节点值大。所以，最小差值一定在最左右子节点-根节点，或者根节点-最右左子节点中产生。
 
+### 993 [判断二叉树中给定两个节点是否为堂兄弟节点](../java/com/ckm/tree/easy/Solution993.java)
+问题描述：
+
+　　在一棵二叉树中，根节点的深度定义为`0`，第`k`层节点的子节点深度为`k+1`。如果有两个节点在同一深度，但是其父节点不相同，则称这两个节点为堂兄弟节点。
+给定一个不含重复值的二叉树，以及两个数字`x`和`y`，需要判断值为`x`和`y`的这两个节点在二叉树中是否为堂兄弟节点。
+
+示例：
+
+Example 1:
+
+![示例一](images/q_993_1.png)
+
+```
+Input: root = [1,2,3,4], x = 4, y = 3
+Output: false
+```
+
+Example 2:
+
+![示例二](images/q_993_2.png)
+
+```
+Input: root = [1,2,3,null,4,null,5], x = 5, y = 4
+Output: true
+```
+
+Example 3:
+
+![示例三](images/q_993_3.png)
+
+```
+Input: root = [1,2,3,null,4], x = 2, y = 3
+Output: false
+```
+
+解法：
+
+　　分别判断给定的`x`和`y`是否在同一深度，以及是否是同一根节点下的子节点。
+
 ### number []()
 问题描述：
 

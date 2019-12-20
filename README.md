@@ -15,7 +15,7 @@
 
 　　截止到2019-09-16，leetcode上累计已有1108个算法题，建立本项目的目的是在众多算法题中规划一个合理的解题计划，逐步消灭各题。
 
-　　累计总数: 53
+　　累计总数: 54
 
 打卡：
 
@@ -45,3 +45,4 @@
 | 2019-12-17 | [1022](src/main/resources/tree.md), [669](src/main/resources/tree.md), [637](src/main/resources/tree.md), [653](src/main/resources/tree.md) |
 | 2019-12-18 | [538](src/main/resources/tree.md), [872](src/main/resources/tree.md), [501](src/main/resources/tree.md), [687](src/main/resources/tree.md) |
 | 2019-12-19 | [606](src/main/resources/tree.md), [530](src/main/resources/tree.md) |
+| 2019-12-20 | [993](src/main/resources/tree.md) |
