@@ -772,6 +772,35 @@ Output: false
 
 　　分别判断给定的`x`和`y`是否在同一深度，以及是否是同一根节点下的子节点。
 
+### 783 [](../java/com/ckm/tree/easy/Solution783.java)
+问题描述：
+
+　　给定一个BST，返回二叉树中任意节点之间最小的差值。
+
+示例：
+
+```
+Example :
+
+Input: root = [4,2,6,1,3,null,null]
+Output: 1
+Explanation:
+
+The given tree [4,2,6,1,3,null,null] is represented by the following diagram:
+
+          4
+        /   \
+      2      6
+     / \    
+    1   3  
+
+最小差值为1，出现在节点1和节点2之间，或者节点3和节点2之间，或者节点4和节点3之间
+```
+
+解法：
+
+　　最小值只会出现在根节点与最右左子节点之间，或者根节点与最左右子节点之间。遍历这棵树，用一个变量维持最小值即可。
+
 ### number []()
 问题描述：
 
