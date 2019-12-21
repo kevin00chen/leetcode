@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution543();
+        testSolution437();
+    }
+
+    private static void testSolution437() {
+        Solution437 solution437 = new Solution437();
+        int x = solution437.pathSum(stringToTreeNode("[1,-2,-3,1,3,-2,null,-1]"), -1);
+        System.out.println();
     }
 
     private static void testSolution543() {
