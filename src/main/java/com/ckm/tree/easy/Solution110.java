@@ -10,7 +10,11 @@ public class Solution110 {
         int l = maxDepth(1, root.left);
         int r = maxDepth(1, root.right);
 
-        return Math.abs(l - r) <= 1;
+        if (Math.abs(l - r) > 1) {
+            return false;
+        }
+
+        return isBalanced(root.left) && isBalanced(root.right);
     }
 
 

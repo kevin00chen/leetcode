@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution437();
+        testSolution110();
+    }
+
+    private static void testSolution110() {
+        Solution110 solution110 = new Solution110();
+        boolean x = solution110.isBalanced(stringToTreeNode("[1,2,2,3,null,null,3,4,null,null,4]"));
+        System.out.println();
     }
 
     private static void testSolution437() {
