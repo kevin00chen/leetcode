@@ -911,6 +911,47 @@ Return 3. The paths that sum to 8 are:
 
 　　在判断包含当前节点的路径和中，分别可以求当前节点是否等于给定求和值，左右子树中以当前节点为顶点路径中是否和未给定值-父节点值 
 
+### 671 [查找特定二叉树中第二小值](../java/com/ckm/tree/easy/Solution671.java)
+问题描述：
+
+　　给定一个特定的节点值为非负整数的非空二叉树，并且每个节点要么没有子节点，要么有两个子节点。如果有两个子节点，那么当前节点的值是子节点中最小的那个值。
+即始终满足条件`root.val = min(root.left.val, root.right.val)`。
+
+　　需要在给定的二叉树中，找出整棵树中不同节点值中第二小的。如果不存在第二小值，那么返回`-1`。
+
+示例：
+
+```
+Example 1:
+Input: 
+    2
+   / \
+  2   5
+     / \
+    5   7
+
+Output: 5
+Explanation: The smallest value is 2, the second smallest value is 5.
+
+Example 2:
+Input: 
+    2
+   / \
+  2   2
+
+Output: -1
+Explanation: The smallest value is 2, but there isn't any second smallest value.
+```
+
+解法：
+
+　　根据树的定义以及递推关系式可知，根节点的值是最小值。但是我们需要求第二小值，在后续处理过程中需要用到该最小值，所以定义一个`min`变量存该值。
+另外定义一个变量`ans`存计算的结果，`ans`初始值为`Long.MAX_VALUE`。
+
+　　深度遍历该树，如果当前节点值比`min`大，并且小于当前的`ans`，就需要用当前节点值替换掉`ans`，否则继续遍历左右子树。
+
+　　由于`min`值固定，求第二小值的整个过程类似于求`min`值。
+
 ### number []()
 问题描述：
 

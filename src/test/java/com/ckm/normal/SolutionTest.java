@@ -18,7 +18,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution110();
+        testSolution671();
+    }
+
+    private static void testSolution671() {
+        Solution671 solution671 = new Solution671();
+        int x = solution671.findSecondMinimumValue(stringToTreeNode("[2,2,5,null,null,5,7]"));
+        System.out.println();
     }
 
     private static void testSolution110() {
