@@ -12,6 +12,7 @@ import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
 import com.ckm.tree.easy.*;
 import com.ckm.tree.hard.Solution1028;
+import com.ckm.tree.hard.Solution297;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -19,7 +20,14 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution1028();
+        testSolution297();
+    }
+
+    private static void testSolution297() {
+        Solution297 solution297 = new Solution297();
+        String x = solution297.serialize(stringToTreeNode("[1,2]"));
+        TreeNode t = solution297.deserialize(x);
+        System.out.println();
     }
 
     private static void testSolution1028() {
