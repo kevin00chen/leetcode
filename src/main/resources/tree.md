@@ -993,7 +993,7 @@ Output: [1,401,null,349,88,90]
 
 　　类似于二分查找，根据当前深度，遍历字符串，然后从中间将剩余字符串分割成左右两部分。递归左右两部分继续求其组成的树，分别当作当前节点的左右子树。
 
-### 297 [HARD][HARD][二叉树的序列化与反序列化](../java/com/ckm/tree/hard/Solution297.java)
+### 297 [HARD][二叉树的序列化与反序列化](../java/com/ckm/tree/hard/Solution297.java)
 问题描述：
 
 　　序列化是将一个数据结构或对象转化成bits序列，然后可以方便的存储到文件，或者内存中，或者通过网络进行传输。反序列化是将接受到的bits序列还原成原数据结构或对象。
@@ -1021,6 +1021,34 @@ as "[1,2,3,null,null,4,5]"
 解法：
 
 　　序列化比较相对简单，深度遍历二叉树，遇到空节点用`null`表示。
+
+### 834 [HARD][N叉树节点间路径距离和](../java/com/ckm/tree/hard/Solution834.java)
+问题描述：
+
+　　给定N个节点，节点值为`[0, N - 1]`，以及`N - 1`条边。第`i`条边连接节点`edges[i][0]`和`edges[i][1]`。
+
+　　求`ans`数组，其中`ans[i]`表示节点`i`到其他全部节点的距离。
+
+示例：
+
+```
+Example 1:
+Input: N = 6, edges = [[0,1],[0,2],[2,3],[2,4],[2,5]]
+Output: [8,12,6,10,10,10]
+Explanation: 
+Here is a diagram of the given tree:
+  0
+ / \
+1   2
+   /|\
+  3 4 5
+We can see that dist(0,1) + dist(0,2) + dist(0,3) + dist(0,4) + dist(0,5)
+equals 1 + 1 + 2 + 2 + 2 = 8.  Hence, answer[0] = 8, and so on.
+```
+
+解法：
+
+　　
 
 ### number [][]()
 问题描述：

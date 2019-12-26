@@ -48,7 +48,7 @@ def add_solutions():
         update_md_files.append(md_file)
         level = file.split('/')[6].upper()
         num = int(file.split('/')[7].split('.java')[0].replace('Solution', ''))
-        cmd = "sed -ig \"s/^### " + str(num) + " \[\(.*\)\]()$/### " + str(num) + " \[" + level + "\]\[\\1\]\(" + file.replace('src/main', '..').replace('/', '\/').replace('\n', '') +  "\)/\" " + md_file
+        cmd = "sed -ig \"s/^### " + str(num) + " \[\]\[\(.*\)\]()$/### " + str(num) + " \[" + level + "\]\[\\1\]\(" + file.replace('src/main', '..').replace('/', '\/').replace('\n', '') +  "\)/\" " + md_file
         os.system(cmd)
         new_files[num] = type
 
