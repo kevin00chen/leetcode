@@ -11,6 +11,7 @@ import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
 import com.ckm.tree.easy.*;
+import com.ckm.tree.hard.Solution1028;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -18,7 +19,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution671();
+        testSolution1028();
+    }
+
+    private static void testSolution1028() {
+        Solution1028 solution1028 = new Solution1028();
+        TreeNode t = solution1028.recoverFromPreorder("1-401--349---90--88");
+        System.out.println();
     }
 
     private static void testSolution671() {
