@@ -4,7 +4,7 @@ import datetime
 git_content = ""
 
 new_q_template = """
-### number []()
+### number [][]()
 问题描述：
 
 　　
@@ -46,8 +46,9 @@ def add_solutions():
         type = file.split('/')[5]
         md_file = "src/main/resources/" + type + ".md"
         update_md_files.append(md_file)
+        level = file.split('/')[6].upper()
         num = int(file.split('/')[7].split('.java')[0].replace('Solution', ''))
-        cmd = "sed -ig \"s/^### " + str(num) + " \[\(.*\)\]()$/### " + str(num) + " \[\\1\]\(" + file.replace('src/main', '..').replace('/', '\/').replace('\n', '') +  "\)/\" " + md_file
+        cmd = "sed -ig \"s/^### " + str(num) + " \[\(.*\)\]()$/### " + str(num) + " \[" + level + "\]\[\\1\]\(" + file.replace('src/main', '..').replace('/', '\/').replace('\n', '') +  "\)/\" " + md_file
         os.system(cmd)
         new_files[num] = type
 
