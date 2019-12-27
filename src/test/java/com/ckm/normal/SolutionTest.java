@@ -11,8 +11,7 @@ import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
 import com.ckm.tree.easy.*;
-import com.ckm.tree.hard.Solution1028;
-import com.ckm.tree.hard.Solution297;
+import com.ckm.tree.hard.*;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -20,7 +19,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) {
-        testSolution297();
+        testSolution834();
+    }
+
+    private static void testSolution834() {
+        Solution834 solution834 = new Solution834();
+        solution834.sumOfDistancesInTree(6, new int[][]{{0,1},{0,2},{2,3},{2,4},{2,5}});
+        System.out.println();
     }
 
     private static void testSolution297() {
