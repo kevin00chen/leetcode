@@ -1028,7 +1028,7 @@ as "[1,2,3,null,null,4,5]"
 ### 834 [HARD][N叉树节点间路径距离和](../java/com/ckm/tree/hard/Solution834.java)
 问题描述：
 
-　　给定N个节点，节点值为`[0, N - 1]`，以及`N - 1`条边。第`i`条边连接节点`edges[i][0]`和`edges[i][1]`。
+　　给定一个无向连通N叉树，其中N个节点的节点值为`[0, N - 1]`，其中包含有`N - 1`条边。第`i`条边连接节点`edges[i][0]`和`edges[i][1]`。
 
 　　求`ans`数组，其中`ans[i]`表示节点`i`到其他全部节点的距离。
 
@@ -1047,16 +1047,43 @@ Here is a diagram of the given tree:
   3 4 5
 We can see that dist(0,1) + dist(0,2) + dist(0,3) + dist(0,4) + dist(0,5)
 equals 1 + 1 + 2 + 2 + 2 = 8.  Hence, answer[0] = 8, and so on.
+
+     0
+    /
+   2
+  /
+ 1
 ```
 
 解法：
 
 　　题目的描述比较难以理解，参考示例一会有比较直观的印象。
 
-　　动态规划，每一个节点对应一个数组，`fn[i][0]`表示节点`i`的子树所有节点到节点`i`的路径和，`fn[i][1]`表示节点`i`的全部子节点个数，包含自己。
+　　在实际测试时发现，`edges`中的连接可以是无序的。即`[0, 1]`和`[1, 0]`都表示从节点`0`连接到节点`1`的一条边。所以，叶子节点应该在`edges`中只出现一次。
+以下算法的前提是`edges`中前后两个数字出现的顺序是从上往下，并且根节点为`0`。
+
+　　动态规划，每一个节点对应一个长度为`2`的数组，`fn[i][0]`表示节点`i`的子树所有节点到节点`i`的路径和，`fn[i][1]`表示节点`i`的全部子节点个数，包含自己。
 所以，对于叶子节点有`fn[i][0] = 0, fn[i][1] = 1`。
 
-https://blog.csdn.net/xieshimao/article/details/82979241
+　　对于节点`root`，它所有子节点到它的距离之和为，即，对于任意节点，它所有子节点到它的距离之和为每一个直接子节点到它的距离之和。
+对于其中某一个直接子节点，以该直接子节点为根的树中全部节点到根的距离之和为`fn[child][0]`，并且子树中每个节点到当前节点的距离都需要加`1`，所以还需要加上`fn[child][1]`。
+
+<img src="http://latex.codecogs.com/gif.latex?fn[root][0] = \sum_{direct\ child}^{all\ child}(fn[child][0] + fn[child][1])" />
+
+　　另外，对于节点`root`，它的子树中包含的全部节点数为，
+
+<img src="http://latex.codecogs.com/gif.latex?fn[root][1] = \sum_{direct\ child}^{all\ child}(fn[child][1]) + 1" />
+
+　　假设节点`0`的结果为`ans[0]`，那么对于`0`的直接子节点`child_x`，有`child_x`的所有子节点(包括他自己本身)到`child_x`的距离都为到节点`0`的距离减`1`，
+其他节点到`child_x`的距离都为到节点`0`的距离加`1`。即，
+
+<img src="http://latex.codecogs.com/gif.latex?ans[child_x] = ans[0] - fn[child_x][1] + (N - fn[child_x][1]) = ans[0] - 2fn[child_x][1] + N" />
+
+　　从上面的公式就可以由根节点计算根节点的直接子节点的结果，然后由各根节点的直接子结果再计算全部孙子节点的值，那么，状态转移方程为，其中`child_i`为节点`root`的第`i`个子节点。
+
+<img src="http://latex.codecogs.com/gif.latex?ans[child_i] = ans[root] - fn[child_i][1] + (N - fn[child_i][1]) = ans[0] - 2fn[child_i][1] + N" />
+
+　　遍历该N叉树，首先初始化`fn[N][2]`，将所有叶子节点的`fn[N][1] = 1`。
 
 ### number [][]()
 问题描述：

@@ -13,18 +13,31 @@ import com.ckm.struct.LFUCache;
 import com.ckm.tree.easy.*;
 import com.ckm.tree.hard.*;
 
+import java.io.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class SolutionTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         testSolution834();
     }
 
-    private static void testSolution834() {
+    private static void testSolution834() throws Exception {
         Solution834 solution834 = new Solution834();
-        solution834.sumOfDistancesInTree(6, new int[][]{{0,1},{0,2},{2,3},{2,4},{2,5}});
+        FileInputStream inputStream = new FileInputStream("/Users/chenkaiming/files/workspace/personal/leetcode/src/test/java/com/ckm/normal/array.txt");
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+        int[][] nums = new int[9999][2];
+        String str = null;
+        int i = 0;
+        while((str = bufferedReader.readLine()) != null) {
+            nums[i][0] = Integer.parseInt(str.split(",")[0]);
+            nums[i][1] = Integer.parseInt(str.split(",")[1]);
+            i ++;
+        }
+
+        solution834.sumOfDistancesInTree(10000, nums);
         System.out.println();
     }
 

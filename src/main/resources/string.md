@@ -69,7 +69,7 @@ Output: "bb"
 
 　　递推公式如下，其中`S[i]`和`S[j]`是字符串`S`中的字符：
 
-<img src="http://latex.codecogs.com/gif.latex?f(n)=\begin{cases}\\ true, &i = j\\S[i] = S[j], &j=i+1\\S[i]=S[j]\ and\ f(i+1, j-1), &j > i + 1\end{cases}" />
+<img src="http://latex.codecogs.com/gif.latex?f(n)=\begin{cases} true, &i = j\\S[i] = S[j], &j=i+1\\S[i]=S[j]\ and\ f(i+1, j-1), &j > i + 1\end{cases}" />
 
 　　(4) Manacher算法
 
