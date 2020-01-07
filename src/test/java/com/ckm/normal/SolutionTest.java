@@ -20,7 +20,12 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution834();
+        testSolution99();
+    }
+
+    private static void testSolution99() {
+        Solution99 solution99 = new Solution99();
+        solution99.recoverTree(stringToTreeNode("[1,3,null,null,2]"));
     }
 
     private static void testSolution834() throws Exception {
