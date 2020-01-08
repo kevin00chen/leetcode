@@ -1133,6 +1133,50 @@ Output: [2,1,4,null,null,3]
 　　中序遍历整个BST，首先处理左子树，然后处理根节点，然后处理右子树，借助队列记录中间节点。当前队列中最后一个元素为根节点，倒数第二个元素为根节点的左子节点。
 按照这个顺序，期望的是后面的元素值比前面的元素值大。如果发现不符合该规则的就互换元素值，然后继续遍历。
 
+### 986 [HARD][二叉树](../java/com/ckm/tree/hard/Solution986.java)
+问题描述：
+
+　　给定一个二叉树，在这棵树的某些节点上安装一个"camera"，使得每个"camera"可以同时监控其父节点，直接子节点以及自身。计算这棵树上需要的最小"camera"数。
+
+　　给定二叉树不超过1000个节点，节点值全为0。
+
+示例：
+
+![示例一](images/q_986_1.png)
+
+```
+Example 1:
+Input: [0,0,null,0,0]
+Output: 1
+Explanation: One camera is enough to monitor all nodes if placed as shown.
+```
+
+![示例二](images/q_986_2.png)
+
+```
+Example 2:
+Input: [0,0,null,0,null,0,null,null,0]
+Output: 2
+Explanation: At least two cameras are needed to monitor all nodes of the tree. The above image shows one of the valid configurations of camera placement.
+```
+
+解法一，动态规划：
+
+　　定义三种子树结构：
+
+- State 0，当前节点的全部子树都已经被覆盖，但是当前节点没有被覆盖
+- State 1，当前节点以及全部子树节点都已经被覆盖，但是当前节点没有"camera"
+- State 2，当前节点以及全部子树节点都已经被覆盖，并且当前节点上有"camera"（所以这个"camera"是可以覆盖上一层节点的）
+
+　　那么，对于任意一个节点，
+
+- 如果是State 0，那么它的左右子树必须都为State 1
+- 如果是State 1，那么它的左右子树必须为State1和State2中的一种，并且最少有一个State2
+- 如果是State 2，那么它的左右子树可以为任意状态
+
+　　具体过程可以参考代码注释。
+
+
 ### number [][]()
 问题描述：
 
