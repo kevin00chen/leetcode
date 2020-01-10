@@ -20,7 +20,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution99();
+        testSolution124();
+    }
+
+    private static void testSolution124() {
+        Solution124 solution124 = new Solution124();
+        int x = solution124.maxPathSum(stringToTreeNode("[2, -1]"));
+        System.out.println();
     }
 
     private static void testSolution99() {
