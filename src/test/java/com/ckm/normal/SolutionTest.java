@@ -3,6 +3,8 @@ package com.ckm.normal;
 import com.ckm.array.*;
 import com.ckm.common.ListNode;
 import com.ckm.common.TreeNode;
+import com.ckm.list.easy.Solution1290;
+import com.ckm.list.easy.Solution2;
 import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
@@ -20,7 +22,12 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution99();
+        testSolution1290();
+    }
+
+    private static void testSolution1290() {
+        Solution1290 solution1290 = new Solution1290();
+        int x = solution1290.getDecimalValue(stringToListNode("[1,0,1]"));
     }
 
     private static void testSolution99() {
@@ -418,5 +425,35 @@ public class SolutionTest {
 
         ListNode s = solution.addTwoNumbers(l1, l2);
         System.out.println();
+    }
+
+    public static int[] stringToIntegerArray(String input) {
+        input = input.trim();
+        input = input.substring(1, input.length() - 1);
+        if (input.length() == 0) {
+            return new int[0];
+        }
+
+        String[] parts = input.split(",");
+        int[] output = new int[parts.length];
+        for(int index = 0; index < parts.length; index++) {
+            String part = parts[index].trim();
+            output[index] = Integer.parseInt(part);
+        }
+        return output;
+    }
+
+    public static ListNode stringToListNode(String input) {
+        // Generate array from the input
+        int[] nodeValues = stringToIntegerArray(input);
+
+        // Now convert that list into linked list
+        ListNode dummyRoot = new ListNode(0);
+        ListNode ptr = dummyRoot;
+        for(int item : nodeValues) {
+            ptr.next = new ListNode(item);
+            ptr = ptr.next;
+        }
+        return dummyRoot.next;
     }
 }

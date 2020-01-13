@@ -1,4 +1,4 @@
-package com.ckm.array;
+package com.ckm.list.easy;
 
 import com.ckm.common.ListNode;
 
