@@ -22,7 +22,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution206();
+        testSolution21();
+    }
+
+    private static void testSolution21() {
+        Solution21 solution21 = new Solution21();
+        ListNode x = solution21.mergeTwoLists(stringToListNode("[1,2,4]"), stringToListNode("[1,3,4]"));
+        System.out.println();
     }
 
     private static void testSolution206() {

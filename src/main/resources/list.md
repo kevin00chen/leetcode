@@ -155,6 +155,23 @@ Explanation: You are given the third node with value 1, the linked list should b
 
 　　略
 
+### 21 [EASY][两个有序链表的合并](../java/com/ckm/list/easy/Solution21.java)
+问题描述：
+
+　　给定两个有序的链表，将其按顺序合并成一个新的链表。
+
+示例：
+
+```
+Example:
+Input: 1->2->4, 1->3->4
+Output: 1->1->2->3->4->4
+```
+
+解法：
+
+　　
+
 ### number [][]()
 问题描述：
 
