@@ -3,9 +3,8 @@ package com.ckm.normal;
 import com.ckm.array.*;
 import com.ckm.common.ListNode;
 import com.ckm.common.TreeNode;
-import com.ckm.list.easy.Solution1290;
-import com.ckm.list.easy.Solution2;
-import com.ckm.list.normal.Solution19;
+import com.ckm.list.easy.*;
+import com.ckm.list.normal.*;
 import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
@@ -23,7 +22,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution19();
+        testSolution876();
+    }
+
+    private static void testSolution876() {
+        Solution876 solution876 = new Solution876();
+        ListNode x = solution876.middleNode(stringToListNode("[1,2,3,4,5,6]"));
+        System.out.println();
     }
 
     private static void testSolution19() {

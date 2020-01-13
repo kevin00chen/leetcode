@@ -74,6 +74,42 @@ After removing the second node from the end, the linked list becomes 1->2->3->5.
 
 　　定义一个长度为`n + 1`的滑动窗户，当窗口最后一个元素滑动到最后一个元素时停止滑动，去除该窗口第一个元素即可。
 
+### 876 [EASY][单向链表中间节点](../java/com/ckm/list/easy/Solution876.java)
+问题描述：
+
+　　给定一个非空单向链表，返回该链表的中间节点。如果中间节点有两个，返回其中的第二个节点。
+
+示例：
+
+```
+Example 1:
+Input: [1,2,3,4,5]
+Output: Node 3 from this list (Serialization: [3,4,5])
+The returned node has value 3.  (The judge's serialization of this node is [3,4,5]).
+Note that we returned a ListNode object ans, such that:
+ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.
+
+Example 2:
+Input: [1,2,3,4,5,6]
+Output: Node 4 from this list (Serialization: [4,5,6])
+Since the list has two middle nodes with values 3 and 4, we return the second one.
+```
+
+解法：
+
+解法一：
+　　遍历该链表元素，第一个节点时，返回第一个元素，然后后续连续两个节点都只往后移动一个节点。比如
+
+```
+1 -> 1
+1,2,3 -> 2
+1,2,3,4,5 -> 3
+1,2,3,4,5,6 -> 4
+```
+
+解法二：
+　　快慢指针。
+
 ### number [][]()
 问题描述：
 
