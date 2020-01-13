@@ -110,6 +110,24 @@ Since the list has two middle nodes with values 3 and 4, we return the second on
 解法二：
 　　快慢指针。
 
+### 206 [EASY][单向链表的反转](../java/com/ckm/list/easy/Solution206.java)
+问题描述：
+
+　　反转单向链表，分别使用循环和递归实现。
+
+示例：
+
+```
+Example:
+
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+```
+
+解法：
+
+　　详见代码注释，略。
+
 ### number [][]()
 问题描述：
 

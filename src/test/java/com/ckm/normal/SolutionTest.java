@@ -22,7 +22,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution876();
+        testSolution206();
+    }
+
+    private static void testSolution206() {
+        Solution206 solution206 = new Solution206();
+        ListNode x = solution206.reverseList2(stringToListNode("[1,2,3,4,5,6]"));
+        System.out.println();
     }
 
     private static void testSolution876() {
