@@ -56,6 +56,24 @@ Output: 0
 
 　　遍历该链表，每次向后移动一位，前面的值乘以2.
 
+### 19 [NORMAL][移除List倒数第N个节点](../java/com/ckm/list/normal/Solution19.java)
+问题描述：
+
+　　给定一个List，只遍历List一次，移除从后往前的第N个节点。
+
+示例：
+
+```
+Example:
+
+Given linked list: 1->2->3->4->5, and n = 2.
+After removing the second node from the end, the linked list becomes 1->2->3->5.
+```
+
+解法：
+
+　　定义一个长度为`n + 1`的滑动窗户，当窗口最后一个元素滑动到最后一个元素时停止滑动，去除该窗口第一个元素即可。
+
 ### number [][]()
 问题描述：
 

@@ -5,6 +5,7 @@ import com.ckm.common.ListNode;
 import com.ckm.common.TreeNode;
 import com.ckm.list.easy.Solution1290;
 import com.ckm.list.easy.Solution2;
+import com.ckm.list.normal.Solution19;
 import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
@@ -22,7 +23,12 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution1290();
+        testSolution19();
+    }
+
+    private static void testSolution19() {
+        Solution19 solution19 = new Solution19();
+        ListNode x = solution19.removeNthFromEnd(stringToListNode("[1,2,3]"), 2);
     }
 
     private static void testSolution1290() {
