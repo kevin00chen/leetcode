@@ -128,6 +128,33 @@ Output: 5->4->3->2->1->NULL
 
 　　详见代码注释，略。
 
+### 237 [EASY][单向链表删除节点](../java/com/ckm/list/easy/Solution237.java)
+问题描述：
+
+　　给定一个最少包含两个节点的单向链表，实现一个删除节点的函数，删除当前节点。
+
+示例：
+
+给定一个链表，`head = [4,5,1,9]`, 如下图所示
+
+![示例一](images/q_237.png)
+
+```
+Example 1:
+Input: head = [4,5,1,9], node = 5
+Output: [4,1,9]
+Explanation: You are given the second node with value 5, the linked list should become 4 -> 1 -> 9 after calling your function.
+
+Example 2:
+Input: head = [4,5,1,9], node = 1
+Output: [4,5,9]
+Explanation: You are given the third node with value 1, the linked list should become 4 -> 5 -> 9 after calling your function.
+```
+
+解法：
+
+　　略
+
 ### number [][]()
 问题描述：
 

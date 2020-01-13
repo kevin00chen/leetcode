@@ -65,36 +65,4 @@ public class Solution206 {
 
         return tmp;
     }
-
-
-
-
-
-    // 1,2
-//    public ListNode reverseList2(ListNode head) {
-//        if(head == null){
-//            return head;
-//        }
-//
-//        ListNode last = process(head);
-//        head.next = null;
-//
-//        return last;
-//    }
-//
-//    private ListNode process(ListNode cNode){
-//        ListNode next = cNode.next;
-//
-//        //说明是最后一个节点
-//        if (next == null){
-//            return cNode;
-//        }
-//
-//        //这里返回的是原链表的最后一个节点，反转以后就是头节点了
-//        ListNode listNode = process(next);
-//        next.next = cNode;
-//
-//        //返回头节点
-//        return listNode;
-//    }
 }
