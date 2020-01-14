@@ -193,6 +193,48 @@ Output: 1->2->3
 
 　　循环，使用两个指针，以及一个记录当前节点值的变量。当遇到不相同的值时，调整两个指针的指向，直接跳过中间相同元素。
 
+### 141 [EASY][判断链表是否有环](../java/com/ckm/list/easy/Solution141.java)
+问题描述：
+
+　　给定一个链表，判断其中是否有环。 非负整数`pos`表示链表的尾部指向的节点下标。如果`pos = -1`则没有环。空间复杂度`O(1)`。
+
+示例：
+
+![示例一](images/q_141_1.png)
+
+```
+Example 1:
+
+Input: head = [3,2,0,-4], pos = 1
+Output: true
+Explanation: There is a cycle in the linked list, where tail connects to the second node.
+
+```
+
+![示例二](images/q_141_2.png)
+
+```
+Example 2:
+
+Input: head = [1,2], pos = 0
+Output: true
+Explanation: There is a cycle in the linked list, where tail connects to the first node.
+```
+
+![示例三](images/q_141_3.png)
+
+```
+Example 3:
+
+Input: head = [1], pos = -1
+Output: false
+Explanation: There is no cycle in the linked list.
+```
+
+解法：
+
+　　快慢指针。
+
 ### number [][]()
 问题描述：
 

@@ -22,7 +22,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution83();
+        testSolution141();
+    }
+
+    private static void testSolution141() {
+        Solution141 solution141 = new Solution141();
+        boolean x = solution141.hasCycle(new ListNode(1));
+        System.out.println();
     }
 
     private static void testSolution83() {
