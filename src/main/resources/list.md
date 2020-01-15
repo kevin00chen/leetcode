@@ -235,6 +235,28 @@ Explanation: There is no cycle in the linked list.
 
 　　快慢指针。
 
+### 234 [EASY][回文链表判断](../java/com/ckm/list/easy/Solution234.java)
+问题描述：
+
+　　给定一个单向链表，判断其中的元素是否回文。时间复杂度`O(n)`，空间复杂度`O(1)`。
+
+示例：
+
+```
+Example 1:
+Input: 1->2
+Output: false
+
+Example 2:
+Input: 1->2->2->1
+Output: true
+
+```
+
+解法：
+
+　　将单向链表翻转，然后与原链表进行比对即可。或者可以翻转一半链表，然后与原链表进行一一比对。具体可以参考代码注释。
+
 ### number [][]()
 问题描述：
 
