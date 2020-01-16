@@ -22,7 +22,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution160();
+        testSolution203();
+    }
+
+    private static void testSolution203() {
+        Solution203 solution203 = new Solution203();
+        ListNode x = solution203.removeElements(stringToListNode("[1,2,6,3,4,5,6]"), 6);
+        System.out.println();
     }
 
     private static void testSolution160() {
