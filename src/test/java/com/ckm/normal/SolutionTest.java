@@ -22,7 +22,16 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution141();
+        testSolution160();
+    }
+
+    private static void testSolution160() {
+        Solution160 solution160 = new Solution160();
+        ListNode list1 = stringToListNode("[4,1,8,4,5]");
+        ListNode list2 = stringToListNode("[5,0,1]");
+        list2.next.next.next = list1.next.next;
+        ListNode x = solution160.getIntersectionNode(list1, list2);
+        System.out.println();
     }
 
     private static void testSolution141() {

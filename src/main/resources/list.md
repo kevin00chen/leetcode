@@ -257,6 +257,77 @@ Output: true
 
 　　将单向链表翻转，然后与原链表进行比对即可。或者可以翻转一半链表，然后与原链表进行一一比对。具体可以参考代码注释。
 
+### 160 [EASY][交叉单向链表的连接节点](../java/com/ckm/list/easy/Solution160.java)
+问题描述：
+
+　　找到两个相交链表的连接点。
+
+　　如下两个链表，在节点`c1`处相交。
+
+![示例](images/q_160_1.png)
+
+- 如果两条链表不相交，则返回`null`
+- 函数不能改变链表的原有结构
+- 给定的输入链表中没有环
+- `O(n)``时间复杂度以及`O(1)`空间复杂度
+
+示例：
+
+Example 1:
+
+![示例一](images/q_160_2.png)
+
+```
+Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
+Output: Reference of the node with value = 8
+Input Explanation: The intersected node's value is 8 (note that this must not be 0 if the two lists intersect). From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,0,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
+```
+
+Example 2:
+
+![示例二](images/q_160_3.png)
+
+```
+Input: intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
+Output: Reference of the node with value = 2
+Input Explanation: The intersected node's value is 2 (note that this must not be 0 if the two lists intersect). From the head of A, it reads as [0,9,1,2,4]. From the head of B, it reads as [3,2,4]. There are 3 nodes before the intersected node in A; There are 1 node before the intersected node in B.
+```
+
+Example 3:
+
+![示例三](images/q_160_4.png)
+
+```
+Input: intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
+Output: null
+Input Explanation: From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
+Explanation: The two lists do not intersect, so return null.
+```
+
+解法：
+
+　　假设链表A的长度为`6`，链表B的长度为`4`，公共部分的长度为`2`，如下所示，
+
+```
+A 1 -> 2 -> 3 -> 4 -
+                     \
+B           3 -> 4 -> 5 -> 6 
+                 |         |
+Step-1:          q         p
+Step-2:    s(A)            q
+Step-3:    t(B)
+```
+
+　　那么如果我们可以让链表A先走两步，当A走到3时，链表B同时往后遍历，第一个相同的节点就是交叉点。
+
+　　在实现时，
+
+1、定义指针`p -> A`， `q -> B`，两个指针同时遍历，当`p -> 6`时，`q -> 4`。
+
+2、定义`s -> A`，同时移动`q`和`s`，当`q -> 6`时，`s -> 3`。
+
+3、定义`t -> B`，同时移动`s`和`t`，遇到第一个相同节点就是交叉点了。
+
 ### number [][]()
 问题描述：
 
