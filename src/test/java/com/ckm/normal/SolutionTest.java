@@ -9,6 +9,7 @@ import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
 import com.ckm.other.Solution64;
+import com.ckm.sort.easy.Solution992;
 import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
@@ -22,7 +23,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution203();
+        testSolution992();
+    }
+
+    private static void testSolution992() {
+        Solution992 solution992 = new Solution992();
+        int[] x = solution992.sortArrayByParityII(new int[] {4,2,5,7});
+        System.out.println();
     }
 
     private static void testSolution203() {
