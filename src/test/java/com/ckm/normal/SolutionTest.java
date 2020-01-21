@@ -9,6 +9,7 @@ import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
 import com.ckm.other.Solution64;
+import com.ckm.sort.easy.Solution1122;
 import com.ckm.sort.easy.Solution992;
 import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
@@ -23,7 +24,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution992();
+        testSolution1122();
+    }
+
+    private static void testSolution1122() {
+        Solution1122 solution1122 = new Solution1122();
+        int[] x = solution1122.relativeSortArray(new int[]{2,3,1,3,2,4,6,7,9,2,19}, new int[]{2,1,4,3,9,6});
+        System.out.println();
     }
 
     private static void testSolution992() {
