@@ -9,6 +9,7 @@ import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
 import com.ckm.other.Solution64;
+import com.ckm.sort.easy.Solution1030;
 import com.ckm.sort.easy.Solution1122;
 import com.ckm.sort.easy.Solution992;
 import com.ckm.string.*;
@@ -24,7 +25,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution1122();
+        testSolution1030();
+    }
+
+    private static void testSolution1030() {
+        Solution1030 solution1030 = new Solution1030();
+        int[][] x = solution1030.allCellsDistOrder(4, 7, 3, 2);
+        System.out.println();
     }
 
     private static void testSolution1122() {

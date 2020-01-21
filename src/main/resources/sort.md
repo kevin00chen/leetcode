@@ -60,6 +60,53 @@ Output: [2,2,2,1,4,3,3,9,6,7,19]
 　　由于题目中说到元素个数以及元素值是有限制的，所以在这个方法中不用`HashMap`，而用一个长度为`1001`的数组来计数。
 这样既能根据下标取出元素出现的次数，又能根据下标将剩下的元素进行排序。
 
+### 1030 [EASY][矩阵元素距离给定元素的距离排序](../java/com/ckm/sort/easy/Solution1030.java)
+问题描述：
+
+　　给定一个`R * C`的矩阵，矩阵元素为整数。以及该矩阵中的一个元素的坐标点`(r0, c0)`。按照矩阵中每个元素离给定元素的距离由小到大的顺序返回矩阵中的所有元素。
+
+　　元素`(r1, c1)`和`(r2, c2)`之间的距离为`|r1 - r2| + |c1 - c2|`，相同距离的元素可以任意顺序。
+
+约束条件：
+
+- `1 <= R <= 100`
+- `1 <= C <= 100`
+- `0 <= r0 < R`
+- `0 <= c0 < C`
+
+示例：
+
+```
+Example 1:
+Input: R = 1, C = 2, r0 = 0, c0 = 0
+Output: [[0,0],[0,1]]
+Explanation: The distances from (r0, c0) to other cells are: [0,1]
+
+Example 2:
+Input: R = 2, C = 2, r0 = 0, c0 = 1
+Output: [[0,1],[0,0],[1,1],[1,0]]
+Explanation: The distances from (r0, c0) to other cells are: [0,1,1,2]
+The answer [[0,1],[1,1],[0,0],[1,0]] would also be accepted as correct.
+
+Example 3:
+Input: R = 2, C = 3, r0 = 1, c0 = 2
+Output: [[1,2],[0,2],[1,1],[0,1],[1,0],[0,0]]
+Explanation: The distances from (r0, c0) to other cells are: [0,1,1,2,2,3]
+There are other answers that would also be accepted as correct, such as [[1,2],[1,1],[0,2],[1,0],[0,1],[0,0]].
+```
+
+解法：
+
+　　以给定点`(r0, c0)`为起点，分别向其上下左右以步长为1进行移动。逐步向外扩散。比如下面所示一个`4 * 3`的矩阵，给定坐标处为`1`。
+
+```
+0 0 0 0
+0 0 1 0
+0 0 0 0
+```
+
+　　离的最近的是自身，即`(1, 2)`，其次是距离为`1`的四个点`(0, 2), (2, 2), (1, 1), (0, 3)`，再然后是距离为`2`的点，最远距离为3。
+
 ### number [][]()
 问题描述：
 
