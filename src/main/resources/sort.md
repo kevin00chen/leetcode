@@ -107,6 +107,27 @@ There are other answers that would also be accepted as correct, such as [[1,2],[
 
 　　离的最近的是自身，即`(1, 2)`，其次是距离为`1`的四个点`(0, 2), (2, 2), (1, 1), (0, 3)`，再然后是距离为`2`的点，最远距离为3。
 
+### 349 [EASY][两个数组求交集](../java/com/ckm/sort/easy/Solution349.java)
+问题描述：
+
+　　求两个数组中元素的交集，不限定其顺序。
+
+示例：
+
+```
+Example 1:
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+
+Example 2:
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+```
+
+解法：
+
+　　使用两个`Set`然后遍历其中短的那一个，判断每个元素是否在另一个`Set`中出现。
+
 ### number [][]()
 问题描述：
 
