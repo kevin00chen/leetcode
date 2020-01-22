@@ -11,6 +11,7 @@ import com.ckm.number.Solution9;
 import com.ckm.other.Solution64;
 import com.ckm.sort.easy.Solution1030;
 import com.ckm.sort.easy.Solution1122;
+import com.ckm.sort.easy.Solution242;
 import com.ckm.sort.easy.Solution992;
 import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
@@ -25,7 +26,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution1030();
+        testSolution242();
+    }
+
+    private static void testSolution242() {
+        Solution242 solution242 = new Solution242();
+        boolean x = solution242.isAnagram("rat", "cat");
+        System.out.println();
     }
 
     private static void testSolution1030() {
