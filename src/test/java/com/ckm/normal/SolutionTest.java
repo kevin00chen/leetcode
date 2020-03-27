@@ -9,10 +9,7 @@ import com.ckm.number.Solution12;
 import com.ckm.number.Solution7;
 import com.ckm.number.Solution9;
 import com.ckm.other.Solution64;
-import com.ckm.sort.easy.Solution1030;
-import com.ckm.sort.easy.Solution1122;
-import com.ckm.sort.easy.Solution242;
-import com.ckm.sort.easy.Solution992;
+import com.ckm.sort.easy.*;
 import com.ckm.string.*;
 import com.ckm.struct.LRUCache;
 import com.ckm.struct.LFUCache;
@@ -26,7 +23,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution242();
+        testSolution350();
+    }
+
+    private static void testSolution350() {
+        Solution350 solution350 = new Solution350();
+        int[] x = solution350.intersect(new int[]{4,9,5}, new int[]{9,4,9,8,4});
+        System.out.println();
     }
 
     private static void testSolution242() {
