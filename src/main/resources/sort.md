@@ -212,6 +212,58 @@ Output: false
 
 　　另外，还可以将两个字符串进行排序，然后比对两个字符串每一个位子上的字符是不是相同。
 
+### 1370 [EASY][字符串按字符升和降排序]()
+问题描述：
+
+　　给定一个字符串`s`，按照如下规则对该字符串中的字符重新排序，
+
+  - Step-1，从`s`中找到最小的字符，输出结果中
+  - Step-2，从`s`中找到比Step-1中那个字符大的最小字符，输出到结果中
+  - Step-3，重复Step-2，直到再也无法找到合适的字符为止
+  - Step-4，从`s`中找到最大的字符，输出到结果中
+  - Step-5，从`s`中找到比Step-4中小的最大字符，输出到结果中
+  - Step-6，重复Step-5，直到再也无法找到合适的字符为止
+  - 重复Step-1到Step-6，直到处理完`s`中的全部字符
+  - 在每一步中，每次只能处理一个字符
+
+示例：
+
+```
+  Example 1:
+  Input: s = "aaaabbbbcccc"
+  Output: "abccbaabccba"
+
+  第一轮：
+  Step-1的输出为a，Step-2的输出为b，Step-3的输出为c，abc
+  Step-4的输出为c，Step-5的输出为b，Step-6的输出为a，abccba
+  接下来进行第二轮：
+  Step-1的输出为a，Step-2的输出为b，Step-3的输出为c，abc，abccbaabc
+  Step-4的输出为c，Step-5的输出为b，Step-6的输出为a，abccbaabccba
+
+  Example 2:
+  Input: s = "rat"
+  Output: "art"
+
+  Example 3:
+  Input: s = "leetcode"
+  Output: "cdelotee"
+
+  Example 4:
+  Input: s = "ggggggg"
+  Output: "ggggggg"
+
+  Example 5:
+  Input: s = "spo"
+  Output: "ops"
+```
+
+解法：
+
+　　首先遍历一次字符串，统计出其中每个字符出现的次数，这里升序降序取了一个很巧妙的方法。可以想象一下26个字符`abc ~ xyz`，升序时是从左到右遍历，降序时是从右到左遍历。
+如果有一个指针，在26个字母上来回扫描，就刚好符合题目中的要求。
+
+　　如果当前已经遍历到`z`了，那么接下来`dir`需要为`-1`，表示降序排列，如果遍历到`a`了，那么需要调整`dir`为`1`，表示升序的方向。在遍历过程中，每一个字符都存入输出变量中，然后将计数减一，以及处理过的字符数减一。
+
 ### number [][]()
 问题描述：
 
