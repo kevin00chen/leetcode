@@ -1,3 +1,12 @@
+　　自动脚本`commit.py`功能如下
+
+- 自动更新README.md文档中的题目总数，日期打卡
+- 根据新增java文件自动更新对应子类型题目&解题思路md文档
+
+**注意事项：**
+- 做题时，只需要在对应子md文档中添加题目描述和解题思路即可
+- "### number [][]()"的格式为，更新number参数，以及第二个"[]"增加对题目的描述，后续会自动添加难易级别，以及java文件的链接
+
 　　题目列表
 
 [普通问题](src/main/resources/normal.md)
@@ -14,9 +23,11 @@
 
 [链表](src/main/resources/list.md)
 
+[排序](src/main/resources/sort.md)
+
 　　截止到2019-09-16，leetcode上累计已有1108个算法题，建立本项目的目的是在众多算法题中规划一个合理的解题计划，逐步消灭各题。
 
-　　累计总数: 83
+　　累计总数: 84
 
 打卡：
 
@@ -60,3 +71,4 @@
 | 2020-01-22 | [349](src/main/resources/sort.md), [976](src/main/resources/sort.md), [242](src/main/resources/sort.md) |
 | 2020-03-27 | [350](src/main/resources/sort.md) |
 | 2020-06-01 | [1370](src/main/resources/sort.md) |
+| 2020-06-02 | [1403](src/main/resources/sort.md) |

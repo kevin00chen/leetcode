@@ -23,7 +23,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution350();
+        testSolution1403();
+    }
+
+    private static void testSolution1403() {
+        Solution1403 solution1403 = new Solution1403();
+        Object r = solution1403.minSubsequence(new int[]{4,3,10,9,8});
+        System.out.println();
     }
 
     private static void testSolution350() {
