@@ -2,7 +2,7 @@
 
 [TOC]
 
-### 3 [最长非重复子字符串](../java/com/ckm/string/Solution3.java)
+### 3 [MEDIUM][最长非重复子字符串](../java/com/ckm/string/Solution3.java)
 问题描述：
 
 　　给定一个字符串，返回该字符串中非重复字符子串的最大长度。
@@ -35,7 +35,7 @@ Explanation: 最长非重复子串为 "wke", 长度 3.
 　　2、维护一个滑动窗口`[i, j)`，该窗口中的元素全部不相同。维护一个`Set`记录不同的字符，每次使`j`向后移动一位，当新字符第一次出现，则`j`继续向后移动,
 否则从`i`开始移除`Set`中的元素，直到不再出现重复元素为止。然后继续移动`j`，直到`i`和`j`都遍历完全部元素。
 
-### 5 [寻找字符串的最大回文子串](../java/com/ckm/string/Solution5.java)
+### 5 [MEDIUM][寻找字符串的最大回文子串](../java/com/ckm/string/Solution5.java)
 问题描述：
 
 　　如题
@@ -88,7 +88,7 @@ Output: "bb"
 
 ![动态规划图解](./images/s5-2.png)
 
-### 6 [ZigZag字符转换](../java/com/ckm/string/Solution6.java)
+### 6 [MEDIUM][ZigZag字符转换](../java/com/ckm/string/Solution6.java)
 问题描述：
 
 　　字符串"PAYPALISHIRING"是按照`|/|`形排列的，即首先从上往下依次显示字符，然后斜向上到顶后继续第二列从上往下。如下所示，
@@ -126,7 +126,7 @@ Output: "bb"
 
 　　遍历字符串，按从上往下的顺序设置数组后，再按从左至右的顺序依次读取。没有字符的地方用空字符串表示。
 
-### 8 [字符串转数字](../java/com/ckm/string/Solution8.java)
+### 8 [MEDIUM][字符串转数字](../java/com/ckm/string/Solution8.java)
 问题描述：
 
 　　输入一个字符串，从前往后遍历字符，直到第一个非空格为止。起始字符可以是数字，也可以是`+/-`符号。后续连续取数字字符，作为返回的结果。
@@ -171,7 +171,7 @@ Explanation: 数字"-91283472332"越界，返回`INT_MIN`
 
 　　略，看代码
 
-### 10 [正则表达式匹配](../java/com/ckm/string/Solution10.java)
+### 10 [HARD][正则表达式匹配](../java/com/ckm/string/Solution10.java)
 问题描述：
 
 　　输入一个字符串和一个正则表达式，返回该字符串是否符合正则表达式的匹配。
@@ -245,7 +245,7 @@ Output: false
 （2）动态规划
 　　
 
-### 13 [罗马数字转数字](../java/com/ckm/string/Solution13.java)
+### 13 [EASY][罗马数字转数字](../java/com/ckm/string/Solution13.java)
 问题描述：
 
 　　给定一个罗马数字符号表示的数字，将其转换为阿拉伯数字。
@@ -280,7 +280,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 　　略
 
-### 14 [字符串最长公共前缀](../java/com/ckm/string/Solution14.java)
+### 14 [EASY][字符串最长公共前缀](../java/com/ckm/string/Solution14.java)
 问题描述：
 
 　　找出若干字符串的最长公共字符串前缀序列，如果没有则返回""。给定字符串只由小写字母`a-z`组成。
@@ -312,7 +312,7 @@ Output: ""
 　　分治主要是基于上面的遍历查找，原问题，计算`LCP(S1, S2, ..., Sn)`可以拆解成`LCP(S1, Smid)`和`LCP(Smid, Sn)`即分成两个部分。
 最后再将这两部分的结果聚合一下即可。
 
-### 17 [](../java/com/ckm/string/Solution17.java)
+### 17 [MEDIUM][九宫格字符组合](../java/com/ckm/string/Solution17.java)
 问题描述：
 
 　　给定一个由数字`2~9`组成的字符串，返回九宫格键盘上所有字母可能组成的字符串组合。九宫格键盘如下所示，
@@ -330,7 +330,7 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
 　　递归，从头到尾遍历输入字符串，解析每一个字符，该字符代表的符号依次与剩余字符串拼接。
 
-### 32 [最长有效括号](../java/com/ckm/string/Solution32.java)
+### 32 [HARD][最长有效括号](../java/com/ckm/string/Solution32.java)
 问题描述：
 
 　　给定一个只包含'('和')'组成的字符串，找到其中括号能够正常匹配的最长子字符串。
@@ -363,7 +363,7 @@ Explanation: The longest valid parentheses substring is "()()"
 　　第二种情况不太好理解，这里举个例子如果当前字符串为`()(()`，那么`fn[2] = 2, fn[5] = 2`，如果此时字符串变成`()(())`，即在最右边再加入一个右括号，那么
 `fn[6] = fn[2] + fn[5] + 2 = 2 + 2 + 2 = 6`。这里与上面第三种情况的公式一一对应，仔细体会即可。
 
-### 44 [正则表达式匹配](../java/com/ckm/string/Solution44.java)
+### 44 [HARD][正则表达式匹配](../java/com/ckm/string/Solution44.java)
 问题描述：
 
 　　给定一个字符串，以及一个正则表达式，判断该正则表达式是否可以匹配字符串。正则表达式目前只包含'?'和'*'。与题目10相比，多了一个匹配符号?。
@@ -427,7 +427,7 @@ Output: false
 
 　　需要注意初始化条件不可少。
 
-### 72 [编辑距离](../java/com/ckm/string/Solution72.java)
+### 72 [HARD][编辑距离](../java/com/ckm/string/Solution72.java)
 问题描述：
 
 　　给定两个单词，找到由单词1变换成单词2的最少变换次数。每次只能变换一个字符，并且只能有以下三种变换方式：

@@ -1,18 +1,27 @@
 package com.ckm.normal;
 
-import com.ckm.array.*;
+import com.ckm.array.easy.Solution1;
+import com.ckm.array.easy.Solution53;
+import com.ckm.array.hard.Solution4;
+import com.ckm.array.medium.*;
 import com.ckm.common.ListNode;
 import com.ckm.common.TreeNode;
 import com.ckm.list.easy.*;
-import com.ckm.list.normal.*;
-import com.ckm.number.Solution12;
-import com.ckm.number.Solution7;
-import com.ckm.number.Solution9;
-import com.ckm.other.Solution64;
+import com.ckm.list.medium.*;
+import com.ckm.number.medium.Solution12;
+import com.ckm.number.easy.Solution7;
+import com.ckm.number.easy.Solution9;
+import com.ckm.other.medium.Solution64;
 import com.ckm.sort.easy.*;
-import com.ckm.string.*;
-import com.ckm.struct.LRUCache;
-import com.ckm.struct.LFUCache;
+import com.ckm.string.easy.Solution13;
+import com.ckm.string.easy.Solution14;
+import com.ckm.string.hard.Solution10;
+import com.ckm.string.hard.Solution32;
+import com.ckm.string.hard.Solution44;
+import com.ckm.string.hard.Solution72;
+import com.ckm.string.medium.*;
+import com.ckm.struct.medium.Sulution146;
+import com.ckm.struct.hard.Solution460;
 import com.ckm.tree.easy.*;
 import com.ckm.tree.hard.*;
 
@@ -393,7 +402,7 @@ public class SolutionTest {
     }
 
     private static void testSolution460() {
-        LFUCache cache = new LFUCache(2);
+        Solution460 cache = new Solution460(2);
         cache.put(1, 1);
         cache.put(2, 2);
         Object x4 = cache.get(1); // 1
@@ -442,7 +451,7 @@ public class SolutionTest {
     }
 
     private static void testSolution146() {
-        LRUCache cache = new LRUCache( 2 /* capacity */ );
+        Sulution146 cache = new Sulution146( 2 /* capacity */ );
 
         Object y = cache.get(2);
         cache.put(2, 6);

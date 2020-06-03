@@ -2,7 +2,7 @@
 
 [TOC]
 
-### 146 [LRU Cache](../java/com/ckm/struct/LRUCache.java)
+### 146 [MEDIUM][LRU Cache](../java/com/ckm/struct/Solution146.java)
 问题描述：
 
 　　实现一个LRU Cache数据结构，需要支持get和put操作，按最近使用时间移除元素
@@ -33,7 +33,7 @@
 　　只需要维护一个`Queue`，`get`元素时，如果元素在该队列中，先将其移除，然后重新添加到尾部。
 `put`元素时，如果元素在其中，调用一次`get`方法将其调整到尾部，如果元素不在其中并且`capacity`达到最大，则移除头部一个元素，然后将当前元素添加到尾部。
 
-### 460 [LFU Cache](../java/com/ckm/struct/LFUCache.java)
+### 460 [HARD][LFU Cache](../java/com/ckm/struct/LFUCache.java)
 问题描述：
 
 　　实现一个LFU Cache数据结构，需要在`O(1)`的时间复杂度内支持`put`和`get`方法，

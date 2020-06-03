@@ -2,7 +2,7 @@
 
 [TOC]
 
-### 1 [两数求和](../java/com/ckm/array/Solution1.java)
+### 1 [EASY][两数求和](../java/com/ckm/array/Solution1.java)
 问题描述：
 
 　　给定一个整数数组，返回和为指定数字的元素下标。每个元素只能使用一次。
@@ -19,7 +19,7 @@ nums[0] + nums[1] = 2 + 7 = 9,
 
 　　除了两层遍历的暴力解法之外，还可以用HashMap来解决，遍历数组，target - 当前元素 之差如果不在该map中，则map中添加元素，否则直接返回下标。
 
-### 4 [两个有序数组中位数计算](../java/com/ckm/array/Solution4.java)
+### 4 [HARD][两个有序数组中位数计算](../java/com/ckm/array/Solution4.java)
 问题描述：
 
 　　两个排好序的数组（两个数组不同时为空），分别包含m个和n个元素，计算中位数。时间复杂度`O(log (m+n))`
@@ -45,7 +45,7 @@ The median is (2 + 3)/2 = 2.5
 
 　　
 
-### 11 [整数数组最大容量](../java/com/ckm/array/Solution1.java)
+### 11 [MEDIUM][整数数组最大容量](../java/com/ckm/array/Solution1.java)
 问题描述：
 
 　　给定一个`n`维整数数组`a1, a2, ..., an`，每个数字代表当前点位的高度，找到两个点，构成一个容器，使得该容器中可以盛最多的水，如下图所示。`n >= 2`。
@@ -72,7 +72,7 @@ Output: 49
 　　用指针`i, j`指向数组头尾，当`i, j`未重叠时，依次向里收缩，每次都是矮的那个移动。比如当`height[i] < height[j]`时，如果此时的`i, j`为最大容量，
 如果移动`height[j]`，并不会增大整个容量，因为雨水的最大高度由矮的那边决定，移动高边只会使容量更小。只有移动矮边，如果接下来高度能够得到提升，才有可能进一步增大容量。
 
-### 287 [整数数组重复数字](../java/com/ckm/array/Solution287.java)
+### 287 [MEDIUM][整数数组重复数字](../java/com/ckm/array/Solution287.java)
 问题描述：
 
 　　给定一个包含`n + 1`个整数的数组，数组中的元素取值范围为`1 ~ n`。找到重复出现多次的数字，仅有一个重复数字。
@@ -112,7 +112,7 @@ Output: 3
 如果该元素被访问到，那么说明在其他下标处有一个相同值的元素，最终链表将会以该数字重复出现。
 如果重复元素的值不等于所在数组位置下标，最终该链表会以两个数字循环。
 
-### 15 [三数求和](../java/com/ckm/array/Solution15.java)
+### 15 [MEDIUM][三数求和](../java/com/ckm/array/Solution15.java)
 问题描述：
 
 　　给定一个整数数组，其中是否存在三个整数`a, b, c`使得`a + b + c = 0`，找到所有的不同组合。
@@ -135,7 +135,7 @@ A solution set is:
 　　首先对数组进行排序，一方面可以避免对重复元素的重复处理，另一方面还可以在后续调整索引方向时使用。
 如果目标值过大，则调整右边向左移动。如果目标值过小，则调整左边向右移动。
 
-### 16 [最接近目标值的三数求和](../java/com/ckm/array/Solution16.java)
+### 16 [MEDIUM][最接近目标值的三数求和](../java/com/ckm/array/Solution16.java)
 问题描述：
 
 　　给定一个整数数组，以及一个目标整数。找到数组中三个元素和最接近目标整数的和，该题目中只存在一种组合情况。
@@ -154,7 +154,7 @@ A solution set is:
 
 　　和上一题类似。
 
-### 18 [四数求和](../java/com/ckm/array/Solution18.java)
+### 18 [MEDIUM][四数求和](../java/com/ckm/array/Solution18.java)
 问题描述：
 
 　　给定一个整数数组，以及一个目标值。找到所有使`a + b + c + d = target`的元素组合。
@@ -176,7 +176,7 @@ A solution set is:
 
 　　和三数求和类似，直接套用三数求和的代码，将三数求和的结果由`0`改为输入的第一个数字相反数。
 
-### 53 [最大连续子数组和](../java/com/ckm/array/Solution1.java)
+### 53 [EASY][最大连续子数组和](../java/com/ckm/array/Solution1.java)
 问题描述：
 
 　　给定一个整数数组，找到其中和最大的一段连续子数组(最少包含一个数字)，返回sum值。

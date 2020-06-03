@@ -2,7 +2,7 @@
 
 [TOC]
 
-### 7 [整数反转](../java/com/ckm/number/Solution7.java)
+### 7 [EASY][整数反转](../java/com/ckm/number/Solution7.java)
 问题描述：
 
 　　给定一个整数，将其数字进行反转。
@@ -28,7 +28,7 @@
 
 　　去掉
 
-### 9 [回文数字](../java/com/ckm/number/Solution9.java)
+### 9 [EASY][回文数字](../java/com/ckm/number/Solution9.java)
 问题描述：
 
 　　给定一个整数，判断其是否为回文数字。直接操作数字，不用将其转换为字符串，
@@ -60,7 +60,7 @@ Explanation: 从右到左为01。所以为非回文数字。
 反转时需要注意以0结尾的数字提前处理。`while`循环中，由于只需要反转一半数字，所以没必要将原来的`x`全部循环完即`x > 0`，只需要在`x > y`时继续就行。
 对于`12321`，处理后得到的`y = 123`，此时`x = 12`，这是由于原数字有奇数位，所以在`return`语句中，`x == y / 10`。
 
-### 12 [整数转罗马数字符号](../java/com/ckm/number/Solution12.java)
+### 12 [MEDIUM][整数转罗马数字符号](../java/com/ckm/number/Solution12.java)
 问题描述：
 
 　　罗马数字符号由`I, V, X, L, C, D,  M`表示，其中

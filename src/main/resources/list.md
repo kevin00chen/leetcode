@@ -2,7 +2,7 @@
 
 [TOC]
 
-### 2 [EASY][两数求和](../java/com/ckm/list/easy/Solution2.java)
+### 2 [MEDIUM][两数求和](../java/com/ckm/list/easy/Solution2.java)
 问题描述：
 
 　　给定两个非空的非负整数linked list，每个list中的每位数字表示一个倒序的整数，计算这两个整数的求和结果。结果仍然以倒序整数的linked list表示。
@@ -56,7 +56,7 @@ Output: 0
 
 　　遍历该链表，每次向后移动一位，前面的值乘以2.
 
-### 19 [NORMAL][移除List倒数第N个节点](../java/com/ckm/list/normal/Solution19.java)
+### 19 [NORMAL][移除List倒数第N个节点](../java/com/ckm/list/medium/Solution19.java)
 问题描述：
 
 　　给定一个List，只遍历List一次，移除从后往前的第N个节点。

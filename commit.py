@@ -20,9 +20,24 @@ new_q_template = """
 　　"""
 
 def update_resolve_num():
-    cmd = "grep -o '\[\d\{1,\}\](src/main/resources/\w\{1,\}.md)' README.md | wc -l"
+    cmd = "find src/main/java -type f | grep -E 'hard|easy|medium' |wc -l"
     resolve_num = os.popen(cmd).readlines()[0].replace(' ', '').replace('\n', '')
     cmd = "sed -ig \"s/累计总数: [0-9]*$/累计总数: " + resolve_num + "/\" README.md"
+    os.system(cmd)
+
+    cmd = "find src/main/java -type f | grep 'easy' |wc -l"
+    resolve_num = os.popen(cmd).readlines()[0].replace(' ', '').replace('\n', '')
+    cmd = "sed -ig \"s/| Easy | [0-9]* |$/| Easy | " + resolve_num + " |/\" README.md"
+    os.system(cmd)
+
+    cmd = "find src/main/java -type f | grep 'medium' |wc -l"
+    resolve_num = os.popen(cmd).readlines()[0].replace(' ', '').replace('\n', '')
+    cmd = "sed -ig \"s/| Medium | [0-9]* |$/| Medium | " + resolve_num + " |/\" README.md"
+    os.system(cmd)
+
+    cmd = "find src/main/java -type f | grep 'hard' |wc -l"
+    resolve_num = os.popen(cmd).readlines()[0].replace(' ', '').replace('\n', '')
+    cmd = "sed -ig \"s/| Hard | [0-9]* |$/| Hard | " + resolve_num + " |/\" README.md"
     os.system(cmd)
 
 
