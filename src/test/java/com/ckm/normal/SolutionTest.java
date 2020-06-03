@@ -23,6 +23,12 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
+//      00100000
+//      00010000
+//      01010101
+//      01000101
+        int x = 32;
+        int y = Integer.bitCount(x);
         testSolution1403();
     }
 

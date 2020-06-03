@@ -298,6 +298,50 @@ Output: false
 
 　　数组长度小于500，并且数组元素的值小于100，使用一个长度为100的数组`n`，记录每个数值的元素出现的次数，同时使用一个变量`sum`来求和。接下来从后往前在`n`中取出元素，取出的元素看看和到了多少。直到和比剩下元素之和大为止。
 
+### 1356 [EASY][数组按二进制中1的个数升序排序](../java/com/ckm/sort/easy/Solution1356.java)
+问题描述：
+
+　　给定一个整数数组`arr`，按照数组中每个元素表示为二进制时`1`的个数由少到多排序。如果`1`的个数相同，按数字大小升序。返回排好序的数组。
+
+```
+1 <= arr.length <= 500
+0 <= arr[i] <= 10^4
+```
+
+示例：
+
+```
+Example 1:
+Input: arr = [0,1,2,3,4,5,6,7,8]
+Output: [0,1,2,4,8,3,5,6,7]
+Explantion: [0] is the only integer with 0 bits.
+[1,2,4,8] all have 1 bit.
+[3,5,6] have 2 bits.
+[7] has 3 bits.
+The sorted array by bits is [0,1,2,4,8,3,5,6,7]
+
+Example 2:
+Input: arr = [1024,512,256,128,64,32,16,8,4,2,1]
+Output: [1,2,4,8,16,32,64,128,256,512,1024]
+Explantion: All integers have 1 bit in the binary representation, you should just sort them in ascending order.
+
+Example 3:
+Input: arr = [10000,10000]
+Output: [10000,10000]
+
+Example 4:
+Input: arr = [2,3,5,7,11,13,17,19]
+Output: [2,3,5,17,7,11,13,19]
+
+Example 5:
+Input: arr = [10,100,1000,10000]
+Output: [10,100,10000,1000]
+```
+
+解法：
+
+　　
+
 ### number [][]()
 问题描述：
 
