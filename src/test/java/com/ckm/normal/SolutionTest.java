@@ -32,13 +32,13 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-//      00100000
-//      00010000
-//      01010101
-//      01000101
-        int x = 32;
-        int y = Integer.bitCount(x);
-        testSolution1403();
+        testSolution1329();
+    }
+
+    private static void testSolution1329() {
+        Solution1329 solution1329 = new Solution1329();
+        int[][] x = solution1329.diagonalSort(new int[][]{{3,3,1,1},{2,2,1,2},{1,1,1,2}});
+        System.out.println();
     }
 
     private static void testSolution1403() {

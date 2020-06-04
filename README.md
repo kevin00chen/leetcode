@@ -78,4 +78,4 @@
 | 2020-03-27 | [350](src/main/resources/sort.md) |
 | 2020-06-01 | [1370](src/main/resources/sort.md) |
 | 2020-06-02 | [1403](src/main/resources/sort.md) |
-| 2020-06-03 | [1356](src/main/resources/sort.md), [1329](src/main/resources/sort.md), [1329](src/main/resources/sort.md) |
+| 2020-06-03 | [1356](src/main/resources/sort.md) |
