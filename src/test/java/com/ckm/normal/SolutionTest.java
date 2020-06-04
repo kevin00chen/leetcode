@@ -13,6 +13,7 @@ import com.ckm.number.easy.Solution7;
 import com.ckm.number.easy.Solution9;
 import com.ckm.other.medium.Solution64;
 import com.ckm.sort.easy.*;
+import com.ckm.sort.medium.Solution1329;
 import com.ckm.string.easy.Solution13;
 import com.ckm.string.easy.Solution14;
 import com.ckm.string.hard.Solution10;

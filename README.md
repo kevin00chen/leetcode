@@ -31,8 +31,8 @@
 
 | 难度 | 数量 |
 |---|---|
-| Easy | 59 |
-| Medium | 17 |
+| Easy | 58 |
+| Medium | 18 |
 | Hard | 11 |
 
 打卡：
@@ -79,3 +79,4 @@
 | 2020-06-01 | [1370](src/main/resources/sort.md) |
 | 2020-06-02 | [1403](src/main/resources/sort.md) |
 | 2020-06-03 | [1356](src/main/resources/sort.md) |
+| 2020-06-04 | [1329](src/main/resources/sort.md) |

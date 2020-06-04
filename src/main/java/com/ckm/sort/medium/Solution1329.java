@@ -1,4 +1,4 @@
-package com.ckm.sort.easy;
+package com.ckm.sort.medium;
 
 public class Solution1329 {
     public int[][] diagonalSort(int[][] mat) {
