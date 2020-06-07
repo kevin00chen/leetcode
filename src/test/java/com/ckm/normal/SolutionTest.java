@@ -13,6 +13,7 @@ import com.ckm.number.easy.Solution7;
 import com.ckm.number.easy.Solution9;
 import com.ckm.other.medium.Solution64;
 import com.ckm.sort.easy.*;
+import com.ckm.sort.medium.Solution1305;
 import com.ckm.sort.medium.Solution1329;
 import com.ckm.string.easy.Solution13;
 import com.ckm.string.easy.Solution14;
@@ -33,7 +34,14 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution1329();
+        testSolution1305();
+    }
+
+    private static void testSolution1305() {
+        Solution1305 solution1305 = new Solution1305();
+        TreeNode t1 = stringToTreeNode("[0,null,59,57,90]");
+        TreeNode t2 = stringToTreeNode("[60,17,74,6,20,63,97,null,null,null,null,null,null,95]");
+        Object x = solution1305.getAllElements(t1, t2);
     }
 
     private static void testSolution1329() {
