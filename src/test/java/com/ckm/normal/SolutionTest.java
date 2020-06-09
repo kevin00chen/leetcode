@@ -15,6 +15,7 @@ import com.ckm.other.medium.Solution64;
 import com.ckm.sort.easy.*;
 import com.ckm.sort.medium.Solution1305;
 import com.ckm.sort.medium.Solution1329;
+import com.ckm.sort.medium.Solution1387;
 import com.ckm.string.easy.Solution13;
 import com.ckm.string.easy.Solution14;
 import com.ckm.string.hard.Solution10;
@@ -34,7 +35,12 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution1305();
+        testSolution1387();
+    }
+
+    private static void testSolution1387() {
+        Solution1387 solution1387 = new Solution1387();
+        int x = solution1387.getKth(12, 15, 2);
     }
 
     private static void testSolution1305() {
