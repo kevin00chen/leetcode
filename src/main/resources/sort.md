@@ -464,6 +464,55 @@ Output: 570
 
 　　题目主要是计算出给定整数的power值，接下来根据power排列大小即可。
 
+### 1235 [HARD][](../java/com/ckm/sort/hard/Solution1235.java)
+问题描述：
+Maximum Profit in Job Scheduling
+　　给定`n`个job，每个job都需要在`startTime[i]`到`endTime[i]`时间内被调度，任务运行完就能获得该任务带来的`profit[i]`。
+
+　　给定一系列的`startTime`，`endTime`以及`profit`数组，题目的限定条件是同一时间只能有一个任务在运行，并且超过开始时间还没有被调度的任务，不再重新被调度。只有当上一个任务在时间`X`结束后，才能在`X`时刻开始一个新的任务。
+
+约束条件:
+```
+1 <= startTime.length == endTime.length == profit.length <= 5 * 10^4
+1 <= startTime[i] < endTime[i] <= 10^9
+1 <= profit[i] <= 10^4
+```
+
+示例：
+
+Example 1:
+![示例一](./images/q_1235_1.png)
+```
+Input: startTime = [1,2,3,3], endTime = [3,4,5,6], profit = [50,10,40,70]
+Output: 120
+Explanation: 选择第一个和第四个任务， 
+任务执行的时间跨度为 [1-3]+[3-6] , 获取的prifit为 120 = 50 + 70.
+```
+
+Example 2:
+![示例二](./images/q_1235_2.png)
+```
+Input: startTime = [1,2,3,4,6], endTime = [3,5,10,6,9], profit = [20,20,100,70,60]
+Output: 150
+Explanation: 选择第一，第四，第五个任务， 
+获得的profit为 150 = 20 + 70 + 60.
+```
+
+Example 3:
+![示例三](./images/q_1235_3.png)
+```
+Input: startTime = [1,1,1], endTime = [2,3,4], profit = [5,6,4]
+Output: 6
+Explanation: 选择第二个任务
+```
+
+解法：
+
+　　尝试使用递归的方法，对每一个任务有两种选择状态，即做或者不做。做的话，收益为当前任务的收益+剩余任务的最大收益(相同子问题)，不做的话，收益为剩余任务的最大收益(相同子问题)。
+然后从做或者不做这两种方案中确定当前任务是否需要被选择即可。终止条件是所有任务全部都被遍历过。
+
+　　另外，由于任务之间的起止时间有重叠冲突的部分，每次下一个任务该如何选择，最好首先将任务按照开始时间排好序，选择任务时如果下一个任务的开始时间小于当前任务的结束时间就是可选的。
+
 ### number [][]()
 问题描述：
 

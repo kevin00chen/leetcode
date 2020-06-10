@@ -13,6 +13,7 @@ import com.ckm.number.easy.Solution7;
 import com.ckm.number.easy.Solution9;
 import com.ckm.other.medium.Solution64;
 import com.ckm.sort.easy.*;
+import com.ckm.sort.hard.Solution1235;
 import com.ckm.sort.medium.Solution1305;
 import com.ckm.sort.medium.Solution1329;
 import com.ckm.sort.medium.Solution1387;
@@ -35,7 +36,12 @@ import java.util.Queue;
 public class SolutionTest {
 
     public static void main(String[] args) throws Exception {
-        testSolution1387();
+        testSolution1235();
+    }
+
+    private static void testSolution1235() {
+        Solution1235 solution1235 = new Solution1235();
+        int x = solution1235.jobScheduling(new int[]{1,2,3,3}, new int[]{3,4,5,6}, new int[]{50,10,40,70});
     }
 
     private static void testSolution1387() {
